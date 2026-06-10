@@ -451,36 +451,19 @@
     }
 
     /* ─────────────────────────────────────────────────
-       ZAMPA BANNER (banner decorativo replicato)
+       ZAMPA BANNER
     ───────────────────────────────────────────────── */
-    .zampa-section {
-      background: var(--black);
-      padding: 0;
-      overflow: hidden;
-    }
-    .zampa-section img {
+    .zampa-banner {
+      display: block;
       width: 100%;
-      max-height: 120px;
-      object-fit: cover;
-      object-position: center;
-      filter: brightness(0) invert(1);
-      opacity: 0.08;
+      overflow: hidden;
+      line-height: 0;
     }
-    /* Fallback text version */
-    .zampa-text {
-      background: var(--black);
-      padding: 24px 0;
+    .zampa-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
-    .zampa-text__inner {
-      font-family: 'Vanguard', sans-serif;
-      font-size: clamp(2rem, 5vw, 4rem);
-      font-weight: bold;
-      color: rgba(255,255,255,0.08);
-      text-align: center;
-      letter-spacing: 0.05em;
-      user-select: none;
-    }
-    .zampa-text__inner span { color: var(--pink); opacity: 0.6; }
 
     /* ─────────────────────────────────────────────────
        SECTION 1 – Nuovo scenario
@@ -1185,12 +1168,10 @@
 
 
 <!-- ══════════════════════════════════════════════
-     ZAMPA BANNER (decorativo, come nel sito)
+     ZAMPA BANNER
 ══════════════════════════════════════════════ -->
-<div class="zampa-text" aria-hidden="true">
-  <div class="e-container">
-    <p class="zampa-text__inner">SERVE UNA <span>ZAMPA</span> AI?</p>
-  </div>
+<div class="zampa-banner" aria-hidden="true">
+  <img src="Estro_zampa.svg" alt="Serve una zampa?" loading="lazy" width="2156" height="647">
 </div>
 
 
