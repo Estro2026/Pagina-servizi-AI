@@ -355,9 +355,12 @@
     }
 
     /* Tutti i testi corpo → Roboto */
-    p, li, label, input, textarea, address, span:not(.service-tag):not(.e-label):not(.feature-pill):not(.service-badge) {
+    p, li, label, input, textarea, address {
       font-family: 'Roboto', sans-serif;
     }
+
+    /* Gli span dentro H1 ereditano Vanguard dal genitore */
+    h1 span { font-family: inherit !important; text-transform: inherit; }
 
     /* Label uppercase → Poppins */
     .e-label {
