@@ -2,64 +2,43 @@
 <html lang="it-IT">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Creative Production – Estro Agency</title>
-  <meta name="description" content="Utilizziamo l'intelligenza artificiale come estensione della direzione creativa per migliorare efficienza, qualità e velocità di esecuzione. Campagne, prodotto, prototipazione, strategia.">
+  <meta name="description" content="Dalla creatività alla produzione: l'intelligenza artificiale al servizio del tuo brand. Campagne foto e video, contenuti prodotto, prototipazione e strategia.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="it_IT">
   <meta property="og:site_name" content="Estro">
   <meta property="og:title" content="AI Creative Production – Estro Agency">
   <meta property="og:description" content="Dalla creatività alla produzione: l'intelligenza artificiale al servizio del tuo brand.">
 
-  <!-- Fonts -->
+  <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    /* ================================================
-       CSS RESET & VARIABLES
-    ================================================ */
+    /* ─────────────────────────────────────────────────
+       RESET
+    ───────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --pink: #DB005A;
-      --pink-dark: #b8004a;
-      --black: #000000;
-      --white: #ffffff;
-      --gray-100: #f7f7f7;
-      --gray-200: #efefef;
-      --gray-500: #888888;
-      --gray-700: #333333;
-      --radius: 8px;
-      --radius-lg: 16px;
-      --shadow: 0 4px 24px rgba(0,0,0,0.07);
-      --shadow-hover: 0 8px 40px rgba(0,0,0,0.13);
-      --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
-      --max-width: 1280px;
-    }
-
     html { scroll-behavior: smooth; }
-
     body {
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
       line-height: 1.7;
-      color: var(--gray-700);
-      background: var(--white);
+      color: #333;
+      background: #fff;
       overflow-x: hidden;
     }
-
     img { max-width: 100%; height: auto; display: block; }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
-    button { cursor: pointer; font-family: inherit; }
+    button { cursor: pointer; font-family: inherit; border: none; background: none; }
 
-    /* ================================================
-       TYPOGRAPHY
-    ================================================ */
+    /* ─────────────────────────────────────────────────
+       VANGUARD FONT
+    ───────────────────────────────────────────────── */
     @font-face {
       font-family: 'Vanguard';
       font-style: normal;
@@ -68,605 +47,525 @@
       src: url('https://estro.agency/wp-content/uploads/2021/11/VanguardCF-Regular.woff') format('woff');
     }
 
-    h1 {
+    /* ─────────────────────────────────────────────────
+       ELEMENTOR-LIKE VARIABLES
+    ───────────────────────────────────────────────── */
+    :root {
+      --pink: #DB005A;
+      --pink-dark: #b8004a;
+      --black: #000;
+      --white: #fff;
+      --gray-bg: #f7f7f7;
+      --gray-light: #efefef;
+      --gray-mid: #999;
+      --gray-text: #555;
+      --container: 1140px;
+      --section-pad: 80px;
+      --radius: 4px;
+      --transition: 0.25s ease;
+    }
+
+    /* ─────────────────────────────────────────────────
+       CONTAINER
+    ───────────────────────────────────────────────── */
+    .e-container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    /* ─────────────────────────────────────────────────
+       ELEMENTOR BUTTON STYLE
+    ───────────────────────────────────────────────── */
+    .elementor-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 30px;
+      background: var(--pink);
+      color: var(--white);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.03em;
+      border-radius: var(--radius);
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      border: 2px solid var(--pink);
+      white-space: nowrap;
+    }
+    .elementor-button:hover {
+      background: var(--pink-dark);
+      border-color: var(--pink-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(219,0,90,0.3);
+    }
+    .elementor-button--lg {
+      padding: 15px 40px;
+      font-size: 16px;
+    }
+    .elementor-button--outline {
+      background: transparent;
+      color: var(--pink);
+    }
+    .elementor-button--outline:hover {
+      background: var(--pink);
+      color: var(--white);
+    }
+    .elementor-button--white {
+      background: var(--white);
+      color: var(--black);
+      border-color: var(--white);
+    }
+    .elementor-button--white:hover {
+      background: var(--gray-light);
+      border-color: var(--gray-light);
+    }
+
+    /* ─────────────────────────────────────────────────
+       ELEMENTOR FORM STYLE
+    ───────────────────────────────────────────────── */
+    .elementor-form .elementor-field-group { margin-bottom: 10px; }
+
+    .elementor-field {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #d5d5d5;
+      border-radius: var(--radius);
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      color: var(--black);
+      background: var(--white);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+      appearance: none;
+    }
+    .elementor-field:focus {
+      border-color: var(--pink);
+      box-shadow: 0 0 0 2px rgba(219,0,90,0.1);
+    }
+    .elementor-field::placeholder { color: #aaa; }
+    .elementor-field-textual { height: 40px; }
+    textarea.elementor-field { height: auto; min-height: 110px; resize: vertical; }
+
+    .elementor-acceptance-field { width: auto; height: auto; accent-color: var(--pink); }
+    .elementor-field-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--gray-text);
+      line-height: 1.5;
+    }
+    .elementor-field-option label { cursor: pointer; }
+    .elementor-field-option a { color: var(--pink); text-decoration: underline; }
+
+    .elementor-form .e-form__buttons { margin-top: 4px; }
+    .elementor-form .elementor-button { width: 100%; justify-content: center; font-size: 14px; padding: 13px 20px; }
+
+    /* ─────────────────────────────────────────────────
+       HEADER / NAVBAR
+    ───────────────────────────────────────────────── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: var(--white);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .e-navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    /* Logo */
+    .e-navbar__logo a { display: flex; align-items: center; }
+    .e-navbar__logo img { height: 44px; width: auto; }
+
+    /* Nav menu */
+    .e-navbar__nav {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      flex: 1;
+      justify-content: flex-end;
+      margin-right: 20px;
+    }
+
+    .e-navbar__nav > li { position: relative; }
+
+    .e-navbar__nav > li > a {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 12px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      color: var(--black);
+      transition: color var(--transition);
+      white-space: nowrap;
+    }
+    .e-navbar__nav > li > a:hover,
+    .e-navbar__nav > li > a.active { color: var(--pink); }
+
+    .e-navbar__nav .has-sub > a::after {
+      content: '\f107';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      font-size: 10px;
+      transition: transform var(--transition);
+    }
+    .e-navbar__nav .has-sub:hover > a::after { transform: rotate(180deg); }
+
+    /* Dropdown */
+    .e-submenu {
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0;
+      min-width: 230px;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+      border: 1px solid var(--gray-light);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-6px);
+      transition: all var(--transition);
+      z-index: 100;
+    }
+    .e-navbar__nav .has-sub:hover .e-submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .e-submenu li a {
+      display: block;
+      padding: 9px 18px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--gray-text);
+      transition: all var(--transition);
+    }
+    .e-submenu li a:hover {
+      color: var(--pink);
+      background: var(--gray-bg);
+      padding-left: 24px;
+    }
+
+    /* CTA */
+    .e-navbar__cta .elementor-button { font-size: 13px; padding: 10px 22px; }
+
+    /* Hamburger */
+    .e-navbar__toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      color: var(--black);
+    }
+
+    /* Mobile menu */
+    .e-mobile-menu {
+      display: none;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--white);
+      z-index: 9998;
+      overflow-y: auto;
+      padding: 0 20px 40px;
+      border-top: 1px solid var(--gray-light);
+    }
+    .e-mobile-menu.open { display: block; }
+    .e-mobile-menu a {
+      display: block;
+      padding: 14px 0;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      border-bottom: 1px solid var(--gray-light);
+      color: var(--black);
+    }
+    .e-mobile-menu a:hover { color: var(--pink); }
+    .e-mobile-menu__sub { padding-left: 16px; background: var(--gray-bg); }
+    .e-mobile-menu__sub a { font-size: 14px; font-weight: 400; }
+    .e-mobile-menu__cta { padding: 20px 0 0; }
+    .e-mobile-menu__cta .elementor-button { width: 100%; justify-content: center; }
+
+    /* ─────────────────────────────────────────────────
+       SECTION BASE
+    ───────────────────────────────────────────────── */
+    .e-section {
+      padding: var(--section-pad) 0;
+    }
+    .e-section--gray { background: var(--gray-bg); }
+    .e-section--black { background: var(--black); color: var(--white); }
+    .e-section--pink { background: var(--pink); color: var(--white); }
+
+    /* ─────────────────────────────────────────────────
+       TYPOGRAPHY — matching Estro site
+    ───────────────────────────────────────────────── */
+    .e-heading-vanguard {
       font-family: 'Vanguard', sans-serif;
       font-weight: bold;
       line-height: 1.15;
       color: var(--black);
     }
 
-    h2 {
+    .e-heading-poppins {
       font-family: 'Poppins', sans-serif;
       font-weight: 700;
       line-height: 1.25;
       color: var(--black);
     }
 
-    h3 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      line-height: 1.3;
-      color: var(--black);
-    }
-
-    p { margin-bottom: 1rem; }
-    p:last-child { margin-bottom: 0; }
-
-    /* ================================================
-       LAYOUT
-    ================================================ */
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 40px;
-    }
-
-    .section { padding: 100px 0; }
-    .section--gray { background: var(--gray-100); }
-    .section--black { background: var(--black); color: var(--white); }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .grid-2--reverse { direction: rtl; }
-    .grid-2--reverse > * { direction: ltr; }
-
-    /* ================================================
-       BUTTONS
-    ================================================ */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 36px;
-      border-radius: var(--radius);
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 15px;
-      letter-spacing: 0.02em;
-      transition: all var(--transition);
-      border: 2px solid transparent;
-      white-space: nowrap;
-    }
-
-    .btn--primary {
-      background: var(--pink);
-      color: var(--white);
-      border-color: var(--pink);
-    }
-    .btn--primary:hover {
-      background: var(--pink-dark);
-      border-color: var(--pink-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(219,0,90,0.35);
-    }
-
-    .btn--outline {
-      background: transparent;
-      color: var(--pink);
-      border-color: var(--pink);
-    }
-    .btn--outline:hover {
-      background: var(--pink);
-      color: var(--white);
-      transform: translateY(-2px);
-    }
-
-    .btn--white {
-      background: var(--white);
-      color: var(--black);
-      border-color: var(--white);
-    }
-    .btn--white:hover {
-      background: var(--gray-200);
-      border-color: var(--gray-200);
-      transform: translateY(-2px);
-    }
-
-    .btn--lg { padding: 18px 48px; font-size: 17px; }
-
-    /* ================================================
-       NAVBAR
-    ================================================ */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: var(--white);
-      border-bottom: 1px solid var(--gray-200);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    }
-
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-    }
-
-    .navbar__logo img { height: 40px; width: auto; }
-
-    .navbar__menu {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .navbar__menu > li { position: relative; }
-
-    .navbar__menu > li > a {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      padding: 8px 14px;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 500;
-      font-size: 14px;
-      color: var(--black);
-      border-radius: var(--radius);
-      transition: color var(--transition);
-    }
-
-    .navbar__menu > li > a:hover { color: var(--pink); }
-
-    .navbar__menu .has-sub > a::after {
-      content: '\f107';
-      font-family: 'Font Awesome 6 Free';
-      font-weight: 900;
-      font-size: 11px;
-      margin-left: 2px;
-      transition: transform var(--transition);
-    }
-
-    .navbar__menu .has-sub:hover > a::after { transform: rotate(180deg); }
-
-    .submenu {
-      position: absolute;
-      top: calc(100% + 8px);
-      left: 0;
-      min-width: 240px;
-      background: var(--white);
-      border-radius: var(--radius);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-      border: 1px solid var(--gray-200);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-8px);
-      transition: all var(--transition);
-      z-index: 100;
-    }
-
-    .navbar__menu .has-sub:hover .submenu {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    .submenu li a {
-      display: block;
-      padding: 10px 20px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--gray-700);
-      transition: all var(--transition);
-    }
-
-    .submenu li a:hover {
-      color: var(--pink);
-      background: var(--gray-100);
-      padding-left: 28px;
-    }
-
-    .submenu li:first-child a { border-radius: var(--radius) var(--radius) 0 0; }
-    .submenu li:last-child a { border-radius: 0 0 var(--radius) var(--radius); }
-
-    .navbar__cta { margin-left: 16px; }
-
-    .navbar__toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 24px;
-      color: var(--black);
-      padding: 8px;
-    }
-
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 72px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: var(--white);
-      z-index: 999;
-      overflow-y: auto;
-      padding: 24px 40px 40px;
-    }
-
-    .mobile-menu.open { display: block; }
-
-    .mobile-menu a {
-      display: block;
-      padding: 14px 0;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 18px;
-      border-bottom: 1px solid var(--gray-200);
-      color: var(--black);
-    }
-
-    .mobile-menu a:hover { color: var(--pink); }
-
-    .mobile-menu .submenu-mobile {
-      padding-left: 20px;
-    }
-
-    .mobile-menu .submenu-mobile a {
-      font-size: 15px;
-      font-weight: 400;
-      padding: 10px 0;
-    }
-
-    /* ================================================
-       HERO
-    ================================================ */
-    .hero {
-      padding: 80px 0 100px;
-      background: var(--white);
-    }
-
-    .hero .grid-2 { gap: 60px; align-items: start; }
-
-    .hero__eyebrow {
-      display: inline-block;
-      background: rgba(219,0,90,0.08);
-      color: var(--pink);
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 13px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 6px 16px;
-      border-radius: 100px;
-      margin-bottom: 24px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      margin-bottom: 24px;
-    }
-
-    .hero h1 span { color: var(--pink); }
-
-    .hero__subtitle {
-      font-size: 17px;
-      color: var(--gray-500);
-      margin-bottom: 40px;
-      line-height: 1.8;
-    }
-
-    /* Hero Form */
-    .hero__form-wrap {
-      background: var(--gray-100);
-      border-radius: var(--radius-lg);
-      padding: 36px;
-    }
-
-    .hero__form-wrap h3 {
-      font-size: 18px;
-      margin-bottom: 24px;
-    }
-
-    .form-group {
-      margin-bottom: 16px;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 14px 18px;
-      border: 1.5px solid var(--gray-200);
-      border-radius: var(--radius);
-      font-family: 'Roboto', sans-serif;
-      font-size: 15px;
-      color: var(--black);
-      background: var(--white);
-      transition: border-color var(--transition), box-shadow var(--transition);
-      outline: none;
-    }
-
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: var(--gray-500); }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: var(--pink);
-      box-shadow: 0 0 0 3px rgba(219,0,90,0.12);
-    }
-
-    .form-group textarea { resize: vertical; min-height: 120px; }
-
-    .form-checkbox {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .form-checkbox input[type="checkbox"] {
-      width: 18px;
-      height: 18px;
-      min-width: 18px;
-      accent-color: var(--pink);
-      margin-top: 3px;
-    }
-
-    .form-checkbox label {
-      font-size: 13px;
-      color: var(--gray-500);
-      line-height: 1.6;
-    }
-
-    .form-checkbox label a { color: var(--pink); text-decoration: underline; }
-
-    .hero__image-wrap {
-      position: relative;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-    }
-
-    .hero__image-placeholder {
-      width: 100%;
-      aspect-ratio: 3/4;
-      background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 50%, #f5f5f5 100%);
-      border-radius: var(--radius-lg);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #bbb;
-      font-family: 'Poppins', sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      gap: 12px;
-      border: 2px dashed #ddd;
-    }
-
-    .hero__image-placeholder i { font-size: 48px; color: var(--pink); opacity: 0.4; }
-
-    /* ================================================
-       ZAMPA BANNER
-    ================================================ */
-    .zampa-banner {
-      background: var(--black);
-      overflow: hidden;
-      padding: 28px 0;
-    }
-
-    .zampa-banner__inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-    }
-
-    .zampa-banner__text {
-      font-family: 'Vanguard', sans-serif;
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: bold;
-      color: var(--white);
-      letter-spacing: 0.04em;
-      text-align: center;
-    }
-
-    .zampa-banner__text span { color: var(--pink); }
-
-    /* ================================================
-       SECTION 1 – Nuovo scenario
-    ================================================ */
-    .section-intro__label {
-      display: inline-block;
+    .e-label {
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
       font-size: 12px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--pink);
-      margin-bottom: 16px;
+      display: block;
+      margin-bottom: 12px;
     }
 
-    .section-intro h2 {
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      margin-bottom: 24px;
-    }
-
-    .features-list {
-      margin-top: 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .features-list__item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 16px 20px;
-      background: var(--white);
-      border-radius: var(--radius);
-      border: 1.5px solid var(--gray-200);
-      transition: all var(--transition);
-    }
-
-    .features-list__item:hover {
-      border-color: var(--pink);
-      box-shadow: var(--shadow-hover);
-      transform: translateX(4px);
-    }
-
-    .features-list__icon {
-      width: 44px;
-      height: 44px;
-      min-width: 44px;
-      background: rgba(219,0,90,0.08);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--pink);
-      font-size: 18px;
-    }
-
-    .features-list__text {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 15px;
-      color: var(--black);
-      margin: 0;
-    }
-
-    .image-card {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .image-placeholder {
-      width: 100%;
-      aspect-ratio: 4/3;
-      background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #ccc;
-      font-family: 'Poppins', sans-serif;
-      font-size: 13px;
-      gap: 8px;
-      border: 2px dashed #ddd;
-    }
-
-    .image-placeholder i { font-size: 40px; color: var(--pink); opacity: 0.3; }
-
-    /* ================================================
-       SECTION 2 – Cosa possiamo realizzare
-    ================================================ */
-    .section-header {
-      text-align: center;
-      max-width: 680px;
-      margin: 0 auto 72px;
-    }
-
-    .section-header h2 {
-      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-      margin-bottom: 16px;
-    }
-
-    .section-header p { color: var(--gray-500); font-size: 17px; }
-
-    .capability-block {
+    /* ─────────────────────────────────────────────────
+       2-COLUMN GRID
+    ───────────────────────────────────────────────── */
+    .e-cols {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 64px;
+      gap: 60px;
       align-items: center;
-      margin-bottom: 100px;
+    }
+    .e-cols--top { align-items: start; }
+    .e-cols--wide { grid-template-columns: 55% 45%; }
+    .e-cols--wide-r { grid-template-columns: 45% 55%; }
+    .e-cols--rev { direction: rtl; }
+    .e-cols--rev > * { direction: ltr; }
+
+    /* ─────────────────────────────────────────────────
+       IMAGE PLACEHOLDER
+    ───────────────────────────────────────────────── */
+    .e-img-placeholder {
+      width: 100%;
+      background: #f0f0f0;
+      border: 2px dashed #ddd;
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #bbb;
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .e-img-placeholder i { font-size: 36px; color: var(--pink); opacity: 0.35; }
+    .e-img-placeholder--hero { aspect-ratio: 3/4; }
+    .e-img-placeholder--landscape { aspect-ratio: 4/3; }
+    .e-img-placeholder--wide { aspect-ratio: 16/7; }
+    .e-img-placeholder--square { aspect-ratio: 1/1; }
+
+    /* ─────────────────────────────────────────────────
+       HERO
+    ───────────────────────────────────────────────── */
+    .hero-section {
+      padding: 70px 0 90px;
     }
 
-    .capability-block:last-child { margin-bottom: 0; }
-    .capability-block--reverse { direction: rtl; }
-    .capability-block--reverse > * { direction: ltr; }
+    .hero-title {
+      font-size: clamp(1.9rem, 3.5vw, 3rem);
+      margin-bottom: 20px;
+    }
+    .hero-title span { color: var(--pink); }
 
-    .capability-block__content h2 {
-      font-size: clamp(1.4rem, 2.5vw, 2rem);
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--gray-text);
+      margin-bottom: 36px;
+      line-height: 1.8;
+    }
+
+    .hero-h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--black);
       margin-bottom: 20px;
     }
 
-    .bullet-list {
-      margin: 20px 0;
+    /* ─────────────────────────────────────────────────
+       ZAMPA BANNER (banner decorativo replicato)
+    ───────────────────────────────────────────────── */
+    .zampa-section {
+      background: var(--black);
+      padding: 0;
+      overflow: hidden;
+    }
+    .zampa-section img {
+      width: 100%;
+      max-height: 120px;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(0) invert(1);
+      opacity: 0.08;
+    }
+    /* Fallback text version */
+    .zampa-text {
+      background: var(--black);
+      padding: 24px 0;
+    }
+    .zampa-text__inner {
+      font-family: 'Vanguard', sans-serif;
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: bold;
+      color: rgba(255,255,255,0.08);
+      text-align: center;
+      letter-spacing: 0.05em;
+      user-select: none;
+    }
+    .zampa-text__inner span { color: var(--pink); opacity: 0.6; }
+
+    /* ─────────────────────────────────────────────────
+       SECTION 1 – Nuovo scenario
+    ───────────────────────────────────────────────── */
+    .feature-pills {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .feature-pill {
+      display: inline-flex;
+      align-items: center;
       gap: 8px;
+      padding: 10px 18px;
+      background: var(--white);
+      border: 1px solid var(--gray-light);
+      border-radius: 100px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--black);
+      transition: all var(--transition);
+    }
+    .feature-pill i { color: var(--pink); font-size: 14px; }
+    .feature-pill:hover {
+      border-color: var(--pink);
+      color: var(--pink);
     }
 
-    .bullet-list li {
+    /* ─────────────────────────────────────────────────
+       SECTION 2 – Cosa possiamo realizzare
+    ───────────────────────────────────────────────── */
+    .section-title-center {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 64px;
+    }
+    .section-title-center h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+    .section-title-center p { color: var(--gray-mid); font-size: 16px; }
+
+    .capability-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+    .capability-row:last-child { margin-bottom: 0; }
+    .capability-row--rev { direction: rtl; }
+    .capability-row--rev > * { direction: ltr; }
+
+    .capability-content h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+
+    .e-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 14px 0;
+    }
+    .e-list li {
       display: flex;
       align-items: flex-start;
       gap: 10px;
       font-size: 15px;
-      color: var(--gray-700);
+      color: var(--gray-text);
+      line-height: 1.6;
     }
-
-    .bullet-list li::before {
+    .e-list li::before {
       content: '\f00c';
       font-family: 'Font Awesome 6 Free';
       font-weight: 900;
       color: var(--pink);
-      font-size: 12px;
-      margin-top: 4px;
+      font-size: 11px;
+      margin-top: 5px;
       flex-shrink: 0;
     }
 
-    .benefits-box {
+    .e-box {
       background: rgba(219,0,90,0.04);
-      border: 1.5px solid rgba(219,0,90,0.15);
-      border-radius: var(--radius);
-      padding: 24px;
-      margin-top: 24px;
+      border-left: 3px solid var(--pink);
+      padding: 20px 20px 20px 24px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin-top: 20px;
     }
-
-    .benefits-box h4 {
+    .e-box h4 {
       font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 14px;
-      letter-spacing: 0.08em;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--pink);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
-    /* ================================================
+    /* ─────────────────────────────────────────────────
        SECTION 3 – Approccio trasparente
-    ================================================ */
-    .transparent-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-    }
-
-    .transparent-left h2 {
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      margin-bottom: 24px;
-    }
-
-    .transparent-right .briefing-list {
+    ───────────────────────────────────────────────── */
+    .briefing-steps {
       display: flex;
       flex-direction: column;
       gap: 12px;
-      margin-bottom: 32px;
+      margin: 24px 0;
     }
-
-    .briefing-item {
+    .briefing-step {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
       padding: 14px 20px;
       background: var(--white);
+      border: 1px solid var(--gray-light);
       border-radius: var(--radius);
-      border: 1.5px solid var(--gray-200);
     }
-
-    .briefing-item__num {
-      width: 36px;
-      height: 36px;
-      min-width: 36px;
+    .briefing-step__num {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
       background: var(--pink);
       color: var(--white);
       border-radius: 50%;
@@ -675,513 +574,454 @@
       justify-content: center;
       font-family: 'Poppins', sans-serif;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 13px;
     }
-
-    .briefing-item__text {
+    .briefing-step p {
       font-family: 'Poppins', sans-serif;
       font-weight: 500;
-      font-size: 15px;
+      font-size: 14px;
       color: var(--black);
       margin: 0;
     }
 
-    /* ================================================
+    /* ─────────────────────────────────────────────────
        SECTION 4 – Workflow
-    ================================================ */
+    ───────────────────────────────────────────────── */
     .workflow-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      gap: 30px;
     }
 
     .workflow-card {
       background: var(--white);
-      border-radius: var(--radius-lg);
-      border: 1.5px solid var(--gray-200);
-      padding: 40px;
-      box-shadow: var(--shadow);
-      transition: all var(--transition);
+      border: 1px solid var(--gray-light);
+      border-radius: var(--radius);
+      padding: 36px;
+      transition: box-shadow var(--transition), border-color var(--transition);
     }
-
     .workflow-card:hover {
-      box-shadow: var(--shadow-hover);
-      border-color: var(--pink);
-      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      border-color: #ddd;
     }
 
-    .workflow-card__header {
+    .workflow-card__head {
       display: flex;
       align-items: center;
-      gap: 16px;
-      margin-bottom: 32px;
+      gap: 14px;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--gray-light);
     }
-
     .workflow-card__icon {
-      width: 52px;
-      height: 52px;
-      background: rgba(219,0,90,0.08);
-      border-radius: 12px;
+      width: 46px;
+      height: 46px;
+      background: rgba(219,0,90,0.07);
+      border-radius: var(--radius);
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--pink);
-      font-size: 22px;
-    }
-
-    .workflow-card__header h2 {
       font-size: 20px;
+    }
+    .workflow-card__head h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
       margin: 0;
+      color: var(--black);
     }
 
-    .workflow-steps {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .workflow-step {
+    .wf-steps { display: flex; flex-direction: column; gap: 0; }
+    .wf-step {
       display: flex;
       align-items: flex-start;
-      gap: 16px;
+      gap: 14px;
       position: relative;
     }
-
-    .workflow-step:not(:last-child)::after {
+    .wf-step:not(:last-child)::after {
       content: '';
       position: absolute;
-      left: 17px;
-      top: 40px;
+      left: 15px;
+      top: 34px;
       width: 2px;
-      height: calc(100% - 8px);
-      background: var(--gray-200);
+      height: calc(100% - 6px);
+      background: var(--gray-light);
     }
-
-    .workflow-step__dot {
-      width: 36px;
-      height: 36px;
-      min-width: 36px;
-      background: var(--gray-100);
-      border: 2px solid var(--gray-200);
+    .wf-step__dot {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      border: 2px solid var(--gray-light);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: 'Poppins', sans-serif;
       font-weight: 700;
-      font-size: 13px;
-      color: var(--gray-700);
-      transition: all var(--transition);
+      font-size: 12px;
+      color: var(--gray-mid);
+      background: var(--white);
       position: relative;
       z-index: 1;
+      transition: all var(--transition);
     }
-
-    .workflow-card:hover .workflow-step__dot {
-      background: var(--pink);
+    .workflow-card:hover .wf-step__dot {
       border-color: var(--pink);
-      color: var(--white);
+      color: var(--pink);
     }
-
-    .workflow-step__content {
-      padding: 6px 0 24px;
-    }
-
-    .workflow-step__content p {
+    .wf-step__text {
+      padding: 5px 0 20px;
       font-family: 'Poppins', sans-serif;
       font-weight: 500;
-      font-size: 15px;
+      font-size: 14px;
       color: var(--black);
-      margin: 0;
     }
 
-    .workflow-note {
-      margin-top: 20px;
-      padding: 14px 18px;
-      background: rgba(219,0,90,0.04);
-      border-left: 3px solid var(--pink);
-      border-radius: 0 var(--radius) var(--radius) 0;
-      font-size: 13px;
-      color: var(--gray-500);
+    .wf-note {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: var(--gray-bg);
+      border-radius: var(--radius);
+      font-size: 12px;
+      color: var(--gray-text);
       line-height: 1.6;
     }
+    .wf-note strong { color: var(--pink); }
 
-    /* ================================================
-       SECTION 5-8 – Servizi Cards
-    ================================================ */
-    .service-section { padding: 100px 0; }
-    .service-section:nth-child(even) { background: var(--gray-100); }
-
-    .service-section h2 {
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      margin-bottom: 16px;
-    }
-
-    .service-section p { font-size: 17px; color: var(--gray-500); line-height: 1.8; }
-
-    .service-badge {
+    /* ─────────────────────────────────────────────────
+       SERVICE SECTIONS (5–8)
+    ───────────────────────────────────────────────── */
+    .service-tag {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: rgba(219,0,90,0.08);
+      gap: 6px;
+      background: rgba(219,0,90,0.06);
       color: var(--pink);
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      padding: 6px 14px;
+      padding: 5px 12px;
       border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    .service-h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+
+    .service-body {
+      font-size: 16px;
+      color: var(--gray-text);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    /* ─────────────────────────────────────────────────
+       SECTION 9 – Contattaci (CTA nera)
+    ───────────────────────────────────────────────── */
+    .cta-section {
+      background: var(--black);
+      padding: var(--section-pad) 0;
+      color: var(--white);
+    }
+
+    .cta-section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.7rem, 3vw, 2.6rem);
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,0.65);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .cta-contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .cta-contact-info li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+    }
+    .cta-contact-info li i { color: var(--pink); width: 18px; }
+
+    .cta-form-wrap {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 36px;
+    }
+    .cta-form-wrap h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--black);
       margin-bottom: 20px;
     }
 
-    /* ================================================
-       SECTION 9 – Contattaci
-    ================================================ */
-    .contact-section {
-      padding: 100px 0;
+    /* ─────────────────────────────────────────────────
+       PRENDIAMOCI UN CAFFÈ
+    ───────────────────────────────────────────────── */
+    .caffe-section {
       background: var(--black);
+      padding: 70px 0;
       color: var(--white);
     }
+    .caffe-section .e-cols { align-items: center; gap: 80px; }
 
-    .contact-section .grid-2 { align-items: start; }
-
-    .contact-section h2 {
-      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    .caffe-title {
+      font-family: 'Vanguard', sans-serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: bold;
       color: var(--white);
-      margin-bottom: 24px;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+    .caffe-sub {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.1rem, 2vw, 1.6rem);
+      font-weight: 400;
+      color: rgba(255,255,255,0.55);
     }
 
-    .contact-section p { color: rgba(255,255,255,0.7); font-size: 17px; line-height: 1.8; }
-
-    .contact-form-wrap {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 40px;
-    }
-
-    .contact-form-wrap .form-group input,
-    .contact-form-wrap .form-group textarea {
-      background: var(--gray-100);
-    }
-
-    /* ================================================
+    /* ─────────────────────────────────────────────────
        PARTNER SECTION
-    ================================================ */
+    ───────────────────────────────────────────────── */
     .partner-section {
-      padding: 80px 0;
+      padding: 60px 0;
       background: var(--white);
-      border-top: 1px solid var(--gray-200);
+      border-top: 1px solid var(--gray-light);
     }
-
-    .partner-section__header {
+    .partner-section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: var(--black);
+      margin-bottom: 36px;
       text-align: center;
-      margin-bottom: 56px;
     }
-
-    .partner-section__header h2 {
-      font-size: 28px;
-      margin-bottom: 12px;
-    }
-
-    .partner-section__header p { color: var(--gray-500); font-size: 16px; }
-
-    .partner-badges {
+    .partner-row {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      gap: 40px;
-      margin-bottom: 56px;
+      gap: 32px;
     }
-
-    .partner-badge {
+    .partner-item {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px 32px;
-      background: var(--gray-100);
+      padding: 16px 28px;
+      background: var(--gray-bg);
       border-radius: var(--radius);
-      border: 1.5px solid var(--gray-200);
+      border: 1px solid var(--gray-light);
       font-family: 'Poppins', sans-serif;
       font-weight: 700;
-      font-size: 16px;
-      color: var(--gray-700);
-      min-width: 140px;
+      font-size: 14px;
+      color: #666;
+      min-width: 130px;
       transition: all var(--transition);
     }
-
-    .partner-badge:hover {
+    .partner-item:hover {
       border-color: var(--pink);
       color: var(--pink);
-      transform: translateY(-3px);
-      box-shadow: var(--shadow);
     }
 
-    .partner-cta {
-      text-align: center;
-      padding: 64px;
-      background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-      border-radius: var(--radius-lg);
-      color: var(--white);
-    }
-
-    .partner-cta h2 {
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      color: var(--white);
-      margin-bottom: 16px;
-    }
-
-    .partner-cta p { color: rgba(255,255,255,0.7); margin-bottom: 32px; font-size: 17px; }
-
-    /* ================================================
+    /* ─────────────────────────────────────────────────
        FOOTER
-    ================================================ */
+    ───────────────────────────────────────────────── */
     .site-footer {
       background: var(--black);
       color: var(--white);
-      padding: 72px 0 0;
+      padding: 60px 0 0;
     }
 
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
-      gap: 60px;
-      padding-bottom: 60px;
+      gap: 48px;
+      padding-bottom: 48px;
     }
 
-    .footer-logo { margin-bottom: 24px; }
-    .footer-logo img { height: 36px; width: auto; filter: brightness(0) invert(1); }
-
-    .footer__desc { color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.8; margin-bottom: 28px; }
+    .footer-brand__logo { margin-bottom: 20px; }
+    .footer-brand__logo img {
+      height: 36px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+    .footer-brand p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
 
     .footer-social {
       display: flex;
-      gap: 12px;
+      gap: 10px;
     }
-
     .footer-social a {
-      width: 40px;
-      height: 40px;
-      background: rgba(255,255,255,0.08);
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.07);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: rgba(255,255,255,0.7);
-      font-size: 16px;
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
       transition: all var(--transition);
     }
-
     .footer-social a:hover {
       background: var(--pink);
       color: var(--white);
-      transform: translateY(-3px);
     }
 
     .footer-col h3 {
       font-family: 'Poppins', sans-serif;
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--white);
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
-
-    .footer-col ul {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
+    .footer-col ul { display: flex; flex-direction: column; gap: 8px; }
     .footer-col ul li a {
-      color: rgba(255,255,255,0.6);
-      font-size: 14px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
       transition: color var(--transition);
     }
-
     .footer-col ul li a:hover { color: var(--pink); }
 
     .footer-col address {
       font-style: normal;
-      color: rgba(255,255,255,0.6);
-      font-size: 14px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
       line-height: 1.8;
     }
-
-    .footer-col address a { color: rgba(255,255,255,0.6); transition: color var(--transition); }
+    .footer-col address a { color: rgba(255,255,255,0.5); transition: color var(--transition); }
     .footer-col address a:hover { color: var(--pink); }
+    .footer-col address strong { color: rgba(255,255,255,0.8); font-weight: 600; }
 
-    .footer-btn-group {
+    .footer-col .footer-btns {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-top: 20px;
+      gap: 8px;
+      margin-top: 14px;
     }
-
-    .footer-btn-group a {
+    .footer-col .footer-btns a {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 20px;
+      padding: 9px 18px;
       border-radius: var(--radius);
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
-      font-size: 13px;
+      font-size: 12px;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.7);
       transition: all var(--transition);
-      border: 1.5px solid rgba(255,255,255,0.2);
+    }
+    .footer-col .footer-btns a:hover {
+      border-color: var(--pink);
+      background: var(--pink);
       color: var(--white);
     }
 
-    .footer-btn-group a:hover {
-      border-color: var(--pink);
-      background: var(--pink);
-    }
-
     .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding: 24px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 20px 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 12px;
     }
-
-    .footer-bottom__copy {
-      font-size: 13px;
-      color: rgba(255,255,255,0.4);
-    }
-
-    .footer-bottom__links {
-      display: flex;
-      gap: 24px;
-    }
-
-    .footer-bottom__links a {
-      font-size: 13px;
-      color: rgba(255,255,255,0.4);
-      transition: color var(--transition);
-    }
-
+    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.3); }
+    .footer-bottom__links { display: flex; gap: 20px; }
+    .footer-bottom__links a { font-size: 12px; color: rgba(255,255,255,0.3); transition: color var(--transition); }
     .footer-bottom__links a:hover { color: var(--pink); }
 
-    /* ================================================
-       ANIMATIONS
-    ================================================ */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(32px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
+    /* ─────────────────────────────────────────────────
+       SCROLL ANIMATIONS
+    ───────────────────────────────────────────────── */
+    .anim-fade { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .anim-left { opacity: 0; transform: translateX(-24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .anim-right { opacity: 0; transform: translateX(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .anim-fade.on, .anim-left.on, .anim-right.on { opacity: 1; transform: none; }
+    .d1 { transition-delay: 0.1s; }
+    .d2 { transition-delay: 0.2s; }
+    .d3 { transition-delay: 0.3s; }
+    .d4 { transition-delay: 0.4s; }
 
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .fade-in-left {
-      opacity: 0;
-      transform: translateX(-32px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .fade-in-left.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .fade-in-right {
-      opacity: 0;
-      transform: translateX(32px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .fade-in-right.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .delay-1 { transition-delay: 0.15s; }
-    .delay-2 { transition-delay: 0.3s; }
-    .delay-3 { transition-delay: 0.45s; }
-    .delay-4 { transition-delay: 0.6s; }
-
-    /* ================================================
+    /* ─────────────────────────────────────────────────
        RESPONSIVE
-    ================================================ */
-    @media (max-width: 1200px) {
-      .container { padding: 0 32px; }
-      .grid-2 { gap: 48px; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
-
+    ───────────────────────────────────────────────── */
     @media (max-width: 1024px) {
-      .section { padding: 72px 0; }
-      .navbar__menu, .navbar__cta { display: none; }
-      .navbar__toggle { display: flex; }
-      .capability-block { gap: 40px; }
+      .e-navbar__nav, .e-navbar__cta { display: none; }
+      .e-navbar__toggle { display: flex; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
     }
 
     @media (max-width: 768px) {
-      .container { padding: 0 20px; }
-      .section { padding: 56px 0; }
-
-      .grid-2,
-      .transparent-grid,
-      .workflow-grid,
-      .capability-block {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .grid-2--reverse,
-      .capability-block--reverse { direction: ltr; }
-
-      .hero { padding: 56px 0; }
-      .hero h1 { font-size: 2rem; }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-      }
-
-      .partner-cta { padding: 40px 24px; }
-      .contact-form-wrap { padding: 28px; }
-      .hero__form-wrap { padding: 24px; }
-      .workflow-card { padding: 28px; }
+      :root { --section-pad: 56px; }
+      .e-container { padding: 0 16px; }
+      .e-cols, .e-cols--wide, .e-cols--wide-r,
+      .capability-row, .workflow-grid { grid-template-columns: 1fr; gap: 32px; }
+      .e-cols--rev, .capability-row--rev { direction: ltr; }
+      .hero-section { padding: 48px 0 56px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .cta-form-wrap { padding: 24px; }
     }
 
     @media (max-width: 480px) {
-      .hero h1 { font-size: 1.7rem; }
-      .partner-badges { gap: 16px; }
-      .partner-badge { min-width: 100px; padding: 16px 20px; font-size: 14px; }
+      .hero-title { font-size: 1.7rem; }
+      .caffe-title { font-size: 1.8rem; }
+      .partner-row { gap: 14px; }
+      .partner-item { min-width: 110px; padding: 12px 16px; font-size: 12px; }
     }
   </style>
 </head>
 <body>
 
-<!-- ================================================
-     NAVBAR
-================================================ -->
+<!-- ══════════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════════ -->
 <header class="site-header" role="banner">
-  <div class="container">
-    <nav class="navbar" aria-label="Navigazione principale">
-      <a href="https://estro.agency/" class="navbar__logo" aria-label="Estro Agency – Homepage">
-        <img src="Estro_logo05 (1).webp" alt="Estro Agency" width="160" height="46">
-      </a>
+  <div class="e-container">
+    <nav class="e-navbar" aria-label="Navigazione principale">
 
-      <ul class="navbar__menu" role="list">
+      <!-- Logo -->
+      <div class="e-navbar__logo">
+        <a href="https://estro.agency/" aria-label="Estro Agency – Homepage">
+          <img src="Estro_logo05 (1).webp" alt="Estro Agency" width="200" height="58">
+        </a>
+      </div>
+
+      <!-- Menu desktop -->
+      <ul class="e-navbar__nav" role="list">
         <li><a href="https://estro.agency/">Home</a></li>
         <li class="has-sub">
-          <a href="#">Servizi</a>
-          <ul class="submenu" role="list">
+          <a href="#" class="active">Servizi</a>
+          <ul class="e-submenu" role="list">
             <li><a href="https://estro.agency/google-ads-per-il-tuo-business/">Google ADS</a></li>
             <li><a href="https://estro.agency/campagne-pubblicitarie-social-per-il-tuo-business/">Social ADS</a></li>
             <li><a href="https://estro.agency/social-media-management/">Social media management</a></li>
@@ -1197,21 +1037,26 @@
         <li><a href="https://estro.agency/news/">News</a></li>
         <li><a href="https://estro.agency/tips-tricks/">Tips &amp; Tricks</a></li>
         <li><a href="https://estro.agency/lavora-con-noi/">Lavora con noi</a></li>
+        <li><a href="https://estro.agency/contatti/">Contatti</a></li>
       </ul>
 
-      <a href="#contatto" class="btn btn--primary navbar__cta">Contattaci</a>
+      <!-- CTA -->
+      <div class="e-navbar__cta">
+        <a href="#contatto" class="elementor-button">Contattaci</a>
+      </div>
 
-      <button class="navbar__toggle" aria-label="Apri menu" aria-expanded="false" id="menuToggle">
+      <!-- Hamburger -->
+      <button class="e-navbar__toggle" id="menuToggle" aria-label="Apri menu" aria-expanded="false">
         <i class="fas fa-bars" id="menuIcon"></i>
       </button>
     </nav>
   </div>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <!-- Mobile menu -->
+  <div class="e-mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="https://estro.agency/">Home</a>
-    <a href="#">Servizi ▾</a>
-    <div class="submenu-mobile">
+    <a href="#">Servizi</a>
+    <div class="e-mobile-menu__sub">
       <a href="https://estro.agency/google-ads-per-il-tuo-business/">Google ADS</a>
       <a href="https://estro.agency/campagne-pubblicitarie-social-per-il-tuo-business/">Social ADS</a>
       <a href="https://estro.agency/social-media-management/">Social media management</a>
@@ -1225,150 +1070,143 @@
     <a href="https://estro.agency/news/">News</a>
     <a href="https://estro.agency/tips-tricks/">Tips &amp; Tricks</a>
     <a href="https://estro.agency/lavora-con-noi/">Lavora con noi</a>
-    <a href="#contatto" style="color: var(--pink); margin-top: 16px;">Contattaci →</a>
+    <a href="https://estro.agency/contatti/">Contatti</a>
+    <div class="e-mobile-menu__cta">
+      <a href="#contatto" class="elementor-button">Contattaci</a>
+    </div>
   </div>
 </header>
 
 
-<!-- ================================================
+<!-- ══════════════════════════════════════════════
      HERO
-================================================ -->
-<section class="hero" aria-labelledby="hero-title">
-  <div class="container">
-    <div class="grid-2">
+══════════════════════════════════════════════ -->
+<main id="content">
+<section class="hero-section" aria-labelledby="hero-title">
+  <div class="e-container">
+    <div class="e-cols e-cols--wide e-cols--top">
+
       <!-- Left -->
-      <div class="fade-in-left">
-        <span class="hero__eyebrow">AI Creative Production</span>
-        <h1 id="hero-title">
+      <div class="anim-left">
+        <span class="e-label">AI Creative Production</span>
+        <h1 class="hero-title e-heading-vanguard" id="hero-title">
           Dalla creatività alla produzione:<br>
           <span>l'intelligenza artificiale</span><br>
           al servizio del tuo brand
         </h1>
-        <p class="hero__subtitle">
+        <p class="hero-subtitle">
           Utilizziamo l'AI come estensione della direzione creativa per migliorare efficienza, qualità e velocità di esecuzione, mantenendo pieno controllo sul risultato finale.
         </p>
+        <p class="hero-h3">Sei nel posto giusto!</p>
 
-        <div class="hero__form-wrap">
-          <h3>Richiedi una consulenza gratuita</h3>
-          <form action="#" method="post" name="hero-contact" novalidate>
-            <div class="form-group">
-              <input type="text" name="nome" placeholder="Nome e Cognome*" required autocomplete="name">
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" placeholder="Email*" required autocomplete="email">
-            </div>
-            <div class="form-group">
-              <input type="tel" name="telefono" placeholder="Telefono" autocomplete="tel" pattern="[0-9()+\-\s]+">
-            </div>
-            <div class="form-checkbox">
-              <input type="checkbox" id="policy-hero" name="policy" required>
+        <form class="elementor-form" method="post" name="Form AI Creative Production" novalidate>
+          <div class="elementor-field-group">
+            <input type="text" class="elementor-field elementor-field-textual" placeholder="Nome e Cognome*" required autocomplete="name">
+          </div>
+          <div class="elementor-field-group">
+            <input type="email" class="elementor-field elementor-field-textual" placeholder="Email*" required autocomplete="email">
+          </div>
+          <div class="elementor-field-group">
+            <input type="tel" class="elementor-field elementor-field-textual" placeholder="Telefono" autocomplete="tel">
+          </div>
+          <div class="elementor-field-group">
+            <span class="elementor-field-option">
+              <input type="checkbox" class="elementor-acceptance-field" id="policy-hero" required>
               <label for="policy-hero">Autorizzo il trattamento dei dati personali secondo la <a href="https://www.iubenda.com/privacy-policy/62391001" target="_blank" rel="noopener">Privacy Policy</a>.*</label>
-            </div>
-            <button type="submit" class="btn btn--primary" style="width:100%;">Contattaci</button>
-          </form>
+            </span>
+          </div>
+          <div class="e-form__buttons">
+            <button type="submit" class="elementor-button">
+              <span class="elementor-button-text">Contattaci</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Right: Hero image -->
+      <div class="anim-right d1">
+        <div class="e-img-placeholder e-img-placeholder--hero">
+          <i class="fas fa-robot"></i>
+          <span>Immagine hero</span>
         </div>
       </div>
 
-      <!-- Right: Hero Image -->
-      <div class="hero__image-wrap fade-in-right delay-1">
-        <div class="hero__image-placeholder">
-          <i class="fas fa-robot"></i>
-          <span>Hero Image</span>
-          <span style="font-size:11px; opacity:0.6;">Sostituisci con immagine definitiva</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
 
-<!-- ================================================
-     ZAMPA BANNER
-================================================ -->
-<div class="zampa-banner" aria-hidden="true">
-  <div class="zampa-banner__inner">
-    <p class="zampa-banner__text">
-      SERVE UNA <span>ZAMPA</span> AI?
-    </p>
+<!-- ══════════════════════════════════════════════
+     ZAMPA BANNER (decorativo, come nel sito)
+══════════════════════════════════════════════ -->
+<div class="zampa-text" aria-hidden="true">
+  <div class="e-container">
+    <p class="zampa-text__inner">SERVE UNA <span>ZAMPA</span> AI?</p>
   </div>
 </div>
 
 
-<!-- ================================================
-     SECTION 1 – Nuovo scenario
-================================================ -->
-<section class="section" aria-labelledby="s1-title">
-  <div class="container">
-    <div class="grid-2">
-      <!-- Left: Image -->
-      <div class="image-card fade-in-left">
-        <div class="image-placeholder">
+<!-- ══════════════════════════════════════════════
+     SEZIONE 1 – Nuovo scenario
+══════════════════════════════════════════════ -->
+<section class="e-section" aria-labelledby="s1-title">
+  <div class="e-container">
+    <div class="e-cols">
+
+      <!-- Left: image -->
+      <div class="anim-left">
+        <div class="e-img-placeholder e-img-placeholder--landscape">
           <i class="fas fa-image"></i>
           <span>Immagine sezione</span>
         </div>
       </div>
 
-      <!-- Right: Text -->
-      <div class="section-intro fade-in-right delay-1">
-        <span class="section-intro__label">Il contesto</span>
-        <h2 id="s1-title">Un nuovo scenario per la produzione creativa</h2>
-        <p>
-          Oggi la comunicazione richiede volumi sempre maggiori di contenuti, su canali differenti, con tempi sempre più compressi e aspettative qualitative elevate.
-        </p>
-        <p>
-          L'intelligenza artificiale consente di ripensare radicalmente i flussi creativi e produttivi, rendendoli:
-        </p>
+      <!-- Right: text -->
+      <div class="anim-right d1">
+        <span class="e-label">Il contesto</span>
+        <h2 class="e-heading-poppins" id="s1-title" style="font-size:clamp(1.5rem,2.5vw,2.1rem);margin-bottom:16px;">Un nuovo scenario per la produzione creativa</h2>
+        <p style="color:var(--gray-text);">Oggi la comunicazione richiede volumi sempre maggiori di contenuti, su canali differenti, con tempi sempre più compressi e aspettative qualitative elevate.</p>
+        <p style="color:var(--gray-text);">L'intelligenza artificiale consente di ripensare radicalmente i flussi creativi e produttivi, rendendoli:</p>
 
-        <ul class="features-list">
-          <li class="features-list__item fade-in delay-1">
-            <div class="features-list__icon"><i class="fas fa-bolt"></i></div>
-            <p class="features-list__text">Più rapidi</p>
-          </li>
-          <li class="features-list__item fade-in delay-2">
-            <div class="features-list__icon"><i class="fas fa-sliders"></i></div>
-            <p class="features-list__text">Più flessibili</p>
-          </li>
-          <li class="features-list__item fade-in delay-3">
-            <div class="features-list__icon"><i class="fas fa-expand-arrows-alt"></i></div>
-            <p class="features-list__text">Più scalabili</p>
-          </li>
-          <li class="features-list__item fade-in delay-4">
-            <div class="features-list__icon"><i class="fas fa-crosshairs"></i></div>
-            <p class="features-list__text">Più controllabili</p>
-          </li>
-        </ul>
+        <div class="feature-pills anim-fade d1">
+          <span class="feature-pill"><i class="fas fa-bolt"></i> Più rapidi</span>
+          <span class="feature-pill"><i class="fas fa-sliders"></i> Più flessibili</span>
+          <span class="feature-pill"><i class="fas fa-expand-arrows-alt"></i> Più scalabili</span>
+          <span class="feature-pill"><i class="fas fa-crosshairs"></i> Più controllabili</span>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
 
-<!-- ================================================
-     SECTION 2 – Cosa possiamo realizzare
-================================================ -->
-<section class="section section--gray" aria-labelledby="s2-title">
-  <div class="container">
-    <div class="section-header fade-in">
-      <span class="section-intro__label">Le nostre capacità</span>
+<!-- ══════════════════════════════════════════════
+     SEZIONE 2 – Cosa possiamo realizzare in AI?
+══════════════════════════════════════════════ -->
+<section class="e-section e-section--gray" aria-labelledby="s2-title">
+  <div class="e-container">
+    <div class="section-title-center anim-fade">
+      <span class="e-label" style="display:block;text-align:center;">Le nostre capacità</span>
       <h2 id="s2-title">Cosa possiamo realizzare in AI?</h2>
       <p>Soluzioni creative avanzate per ogni fase del tuo processo comunicativo.</p>
     </div>
 
-    <!-- Block 1 -->
-    <div class="capability-block">
-      <div class="capability-block__content fade-in-left">
-        <span class="service-badge"><i class="fas fa-shopping-bag"></i> E-commerce & Prodotto</span>
+    <!-- Blocco 1 -->
+    <div class="capability-row">
+      <div class="capability-content anim-left">
+        <span class="service-tag"><i class="fas fa-shopping-bag"></i> E-commerce &amp; Prodotto</span>
         <h2>E-commerce e contenuti prodotto</h2>
-        <p>Partendo da semplici still life o fotografie, realizziamo:</p>
-        <ul class="bullet-list">
+        <p style="color:var(--gray-text);">Partendo da semplici still life o fotografie, realizziamo:</p>
+        <ul class="e-list">
           <li>Ricostruzione del prodotto in alta definizione</li>
           <li>Inserimento su modelli virtuali</li>
           <li>Ambientazioni lifestyle</li>
           <li>Contenuti editoriali pronti per e-commerce, ADV e social</li>
         </ul>
-        <div class="benefits-box">
+        <div class="e-box">
           <h4>I vantaggi</h4>
-          <ul class="bullet-list">
+          <ul class="e-list">
             <li>Tempi e costi di produzione ridotti</li>
             <li>Coerenza visiva su tutta la gamma</li>
             <li>Aumento della qualità percepita del catalogo</li>
@@ -1376,58 +1214,52 @@
           </ul>
         </div>
       </div>
-      <div class="image-card fade-in-right delay-1">
-        <div class="image-placeholder">
+      <div class="anim-right d1">
+        <div class="e-img-placeholder e-img-placeholder--landscape">
           <i class="fas fa-image"></i>
           <span>E-commerce visual</span>
         </div>
       </div>
     </div>
 
-    <!-- Block 2 -->
-    <div class="capability-block capability-block--reverse">
-      <div class="capability-block__content fade-in-right">
-        <span class="service-badge"><i class="fas fa-cube"></i> Prototipazione</span>
+    <!-- Blocco 2 -->
+    <div class="capability-row capability-row--rev">
+      <div class="capability-content anim-right">
+        <span class="service-tag"><i class="fas fa-cube"></i> Prototipazione</span>
         <h2>Prototipazione e sviluppo creativo</h2>
-        <p>L'intelligenza artificiale consente di accelerare i processi di concept e prototipazione, permettendo di testare rapidamente:</p>
-        <ul class="bullet-list">
+        <p style="color:var(--gray-text);">L'intelligenza artificiale consente di accelerare i processi di concept e prototipazione, permettendo di testare rapidamente:</p>
+        <ul class="e-list">
           <li>Varianti colore</li>
           <li>Materiali</li>
           <li>Finiture</li>
           <li>Configurazioni stilistiche</li>
         </ul>
-        <p style="margin-top: 16px;">Partendo anche da un unico prototipo base, sviluppiamo render avanzati che consentono ai brand di validare le scelte creative prima della produzione fisica, riducendo tempi, costi e margine di errore.</p>
+        <p style="color:var(--gray-text);margin-top:12px;">Partendo anche da un unico prototipo base, sviluppiamo render avanzati che consentono ai brand di validare le scelte creative prima della produzione fisica.</p>
       </div>
-      <div class="image-card fade-in-left delay-1">
-        <div class="image-placeholder">
+      <div class="anim-left d1">
+        <div class="e-img-placeholder e-img-placeholder--landscape">
           <i class="fas fa-image"></i>
           <span>Prototyping visual</span>
         </div>
       </div>
     </div>
 
-    <!-- Block 3 -->
-    <div class="capability-block">
-      <div class="capability-block__content fade-in-left">
-        <span class="service-badge"><i class="fas fa-video"></i> Campagne</span>
+    <!-- Blocco 3 -->
+    <div class="capability-row">
+      <div class="capability-content anim-left">
+        <span class="service-tag"><i class="fas fa-video"></i> Campagne foto &amp; video</span>
         <h2>Campagne fotografiche e video</h2>
-        <p>Progettiamo e realizziamo campagne foto e video generate con AI per:</p>
-        <ul class="bullet-list">
+        <p style="color:var(--gray-text);">Progettiamo e realizziamo campagne foto e video generate con AI per:</p>
+        <ul class="e-list">
           <li>Advertising</li>
           <li>Comunicazione digital</li>
           <li>Lancio prodotto</li>
           <li>Contenuti editoriali</li>
         </ul>
-        <p style="margin-top: 16px;">Nei progetti video utilizziamo l'AI in modo strategico per:</p>
-        <ul class="bullet-list">
-          <li>Pre-visualizzare concept</li>
-          <li>Costruire storyboard visivi</li>
-          <li>Validare scene e movimenti</li>
-          <li>Produrre contenuti finali ad alto impatto</li>
-        </ul>
+        <p style="color:var(--gray-text);margin-top:12px;">Nei progetti video utilizziamo l'AI in modo strategico per pre-visualizzare concept, costruire storyboard visivi, validare scene e movimenti, produrre contenuti finali ad alto impatto.</p>
       </div>
-      <div class="image-card fade-in-right delay-1">
-        <div class="image-placeholder">
+      <div class="anim-right d1">
+        <div class="e-img-placeholder e-img-placeholder--landscape">
           <i class="fas fa-image"></i>
           <span>Campaign visual</span>
         </div>
@@ -1438,168 +1270,112 @@
 </section>
 
 
-<!-- ================================================
-     SECTION 3 – Approccio trasparente
-================================================ -->
-<section class="section" aria-labelledby="s3-title">
-  <div class="container">
-    <div class="transparent-grid">
-      <div class="transparent-left fade-in-left">
-        <span class="section-intro__label">Il nostro approccio</span>
-        <h2 id="s3-title">Un approccio trasparente</h2>
-        <p>
-          L'AI offre grandi opportunità, ma presenta ancora limiti tecnici, soprattutto nella produzione video ad altissimo realismo.
-        </p>
-        <p>
-          Quando il progetto richiede massimo realismo, integriamo l'AI con produzione tradizionale, attivando shooting fotografici, riprese video e crew specializzate.
-        </p>
-        <a href="#contatto" class="btn btn--primary" style="margin-top: 16px;">Parliamo del tuo progetto</a>
+<!-- ══════════════════════════════════════════════
+     SEZIONE 3 – Approccio trasparente
+══════════════════════════════════════════════ -->
+<section class="e-section" aria-labelledby="s3-title">
+  <div class="e-container">
+    <div class="e-cols">
+
+      <!-- Left -->
+      <div class="anim-left">
+        <span class="e-label">Il nostro approccio</span>
+        <h2 class="e-heading-poppins" id="s3-title" style="font-size:clamp(1.5rem,2.5vw,2.1rem);margin-bottom:16px;">Un approccio trasparente</h2>
+        <p style="color:var(--gray-text);">L'AI offre grandi opportunità, ma presenta ancora limiti tecnici, soprattutto nella produzione video ad altissimo realismo.</p>
+        <p style="color:var(--gray-text);margin-top:10px;">Quando il progetto richiede massimo realismo, integriamo l'AI con produzione tradizionale, attivando shooting fotografici, riprese video e crew specializzate.</p>
+        <div style="margin-top:24px;">
+          <a href="#contatto" class="elementor-button">Parliamo del tuo progetto</a>
+        </div>
       </div>
 
-      <div class="fade-in-right delay-1">
-        <p style="font-size: 17px; margin-bottom: 24px;">
-          Durante la fase di briefing definiamo con precisione:
-        </p>
-        <ul class="briefing-list">
-          <li class="briefing-item">
-            <div class="briefing-item__num">1</div>
-            <p class="briefing-item__text">Obiettivi del progetto</p>
-          </li>
-          <li class="briefing-item">
-            <div class="briefing-item__num">2</div>
-            <p class="briefing-item__text">Fattibilità tecnica</p>
-          </li>
-          <li class="briefing-item">
-            <div class="briefing-item__num">3</div>
-            <p class="briefing-item__text">Livello di realismo richiesto</p>
-          </li>
-          <li class="briefing-item">
-            <div class="briefing-item__num">4</div>
-            <p class="briefing-item__text">Alternative produttive</p>
-          </li>
-        </ul>
+      <!-- Right -->
+      <div class="anim-right d1">
+        <p style="font-size:16px;color:var(--gray-text);margin-bottom:20px;">Durante la fase di briefing definiamo con precisione:</p>
+        <div class="briefing-steps">
+          <div class="briefing-step"><div class="briefing-step__num">1</div><p>Obiettivi del progetto</p></div>
+          <div class="briefing-step"><div class="briefing-step__num">2</div><p>Fattibilità tecnica</p></div>
+          <div class="briefing-step"><div class="briefing-step__num">3</div><p>Livello di realismo richiesto</p></div>
+          <div class="briefing-step"><div class="briefing-step__num">4</div><p>Alternative produttive</p></div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
 
-<!-- ================================================
-     SECTION 4 – Workflow
-================================================ -->
-<section class="section section--gray" aria-labelledby="s4-title">
-  <div class="container">
-    <div class="section-header fade-in">
-      <span class="section-intro__label">Come lavoriamo</span>
+<!-- ══════════════════════════════════════════════
+     SEZIONE 4 – Workflow AI driven
+══════════════════════════════════════════════ -->
+<section class="e-section e-section--gray" aria-labelledby="s4-title">
+  <div class="e-container">
+    <div class="section-title-center anim-fade">
+      <span class="e-label" style="display:block;text-align:center;">Come lavoriamo</span>
       <h2 id="s4-title">Il nostro workflow AI driven</h2>
       <p>Processi strutturati e collaudati per garantire risultati di qualità.</p>
     </div>
 
     <div class="workflow-grid">
+
       <!-- Workflow Immagini -->
-      <div class="workflow-card fade-in-left delay-1">
-        <div class="workflow-card__header">
+      <div class="workflow-card anim-left d1">
+        <div class="workflow-card__head">
           <div class="workflow-card__icon"><i class="fas fa-camera"></i></div>
           <h2>Workflow immagini</h2>
         </div>
-
-        <div class="image-card" style="margin-bottom: 32px;">
-          <div class="image-placeholder" style="aspect-ratio: 16/6;">
-            <i class="fas fa-image"></i>
-            <span style="font-size:12px;">Workflow visual</span>
-          </div>
+        <div class="e-img-placeholder e-img-placeholder--wide" style="margin-bottom:24px;">
+          <i class="fas fa-image" style="font-size:24px;"></i>
         </div>
-
-        <div class="workflow-steps">
-          <div class="workflow-step">
-            <div class="workflow-step__dot">1</div>
-            <div class="workflow-step__content"><p>Ricezione e analisi del brief</p></div>
-          </div>
-          <div class="workflow-step">
-            <div class="workflow-step__dot">2</div>
-            <div class="workflow-step__content"><p>Definizione concept creativo</p></div>
-          </div>
-          <div class="workflow-step">
-            <div class="workflow-step__dot">3</div>
-            <div class="workflow-step__content"><p>Produzione immagini</p></div>
-          </div>
-          <div class="workflow-step">
-            <div class="workflow-step__dot">4</div>
-            <div class="workflow-step__content"><p>Fase di revisione e ottimizzazione</p></div>
-          </div>
-          <div class="workflow-step">
-            <div class="workflow-step__dot">5</div>
-            <div class="workflow-step__content"><p>Consegna finale</p></div>
-          </div>
+        <div class="wf-steps">
+          <div class="wf-step"><div class="wf-step__dot">1</div><div class="wf-step__text">Ricezione e analisi del brief</div></div>
+          <div class="wf-step"><div class="wf-step__dot">2</div><div class="wf-step__text">Definizione concept creativo</div></div>
+          <div class="wf-step"><div class="wf-step__dot">3</div><div class="wf-step__text">Produzione immagini</div></div>
+          <div class="wf-step"><div class="wf-step__dot">4</div><div class="wf-step__text">Fase di revisione e ottimizzazione</div></div>
+          <div class="wf-step"><div class="wf-step__dot">5</div><div class="wf-step__text">Consegna finale</div></div>
         </div>
       </div>
 
       <!-- Workflow Video -->
-      <div class="workflow-card fade-in-right delay-1">
-        <div class="workflow-card__header">
+      <div class="workflow-card anim-right d1">
+        <div class="workflow-card__head">
           <div class="workflow-card__icon"><i class="fas fa-film"></i></div>
           <h2>Workflow video</h2>
         </div>
-
-        <div class="image-card" style="margin-bottom: 32px;">
-          <div class="image-placeholder" style="aspect-ratio: 16/6;">
-            <i class="fas fa-image"></i>
-            <span style="font-size:12px;">Workflow visual</span>
-          </div>
+        <div class="e-img-placeholder e-img-placeholder--wide" style="margin-bottom:24px;">
+          <i class="fas fa-image" style="font-size:24px;"></i>
         </div>
-
-        <div class="workflow-steps">
-          <div class="workflow-step">
-            <div class="workflow-step__dot">1</div>
-            <div class="workflow-step__content"><p>Ricezione e analisi del brief</p></div>
-          </div>
-          <div class="workflow-step">
-            <div class="workflow-step__dot">2</div>
-            <div class="workflow-step__content"><p>Sviluppo storyboard visuale</p></div>
-          </div>
-          <div class="workflow-step">
-            <div class="workflow-step__dot">3</div>
-            <div class="workflow-step__content"><p>Creazione delle scene principali</p></div>
-          </div>
-          <div class="workflow-step">
-            <div class="workflow-step__dot">4</div>
-            <div class="workflow-step__content"><p>Validazione creativa</p></div>
-          </div>
-          <div class="workflow-step">
-            <div class="workflow-step__dot">5</div>
-            <div class="workflow-step__content"><p>Produzione video</p></div>
-          </div>
-          <div class="workflow-step">
-            <div class="workflow-step__dot">6</div>
-            <div class="workflow-step__content"><p>Consegna finale</p></div>
-          </div>
+        <div class="wf-steps">
+          <div class="wf-step"><div class="wf-step__dot">1</div><div class="wf-step__text">Ricezione e analisi del brief</div></div>
+          <div class="wf-step"><div class="wf-step__dot">2</div><div class="wf-step__text">Sviluppo storyboard visuale</div></div>
+          <div class="wf-step"><div class="wf-step__dot">3</div><div class="wf-step__text">Creazione delle scene principali</div></div>
+          <div class="wf-step"><div class="wf-step__dot">4</div><div class="wf-step__text">Validazione creativa</div></div>
+          <div class="wf-step"><div class="wf-step__dot">5</div><div class="wf-step__text">Produzione video</div></div>
+          <div class="wf-step"><div class="wf-step__dot">6</div><div class="wf-step__text">Consegna finale</div></div>
         </div>
-
-        <div class="workflow-note">
+        <div class="wf-note">
           <strong>Nota:</strong> Una volta approvato lo storyboard, il video non è più reworkabile senza riattivare l'intero processo produttivo.
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
 
-<!-- ================================================
-     SECTION 5 – AI Creative Production
-================================================ -->
-<section class="service-section" aria-labelledby="s5-title">
-  <div class="container">
-    <div class="grid-2">
-      <div class="fade-in-left">
-        <span class="service-badge"><i class="fas fa-star"></i> Servizio</span>
-        <h2 id="s5-title">AI Creative Production</h2>
-        <p>
-          Campagne fotografiche e video, contenuti digitali, visual di brand, asset creativi per ADV e comunicazione multicanale.
-        </p>
-        <a href="#contatto" class="btn btn--primary" style="margin-top: 24px;">Scopri di più</a>
+<!-- ══════════════════════════════════════════════
+     SEZIONE 5 – AI Creative Production
+══════════════════════════════════════════════ -->
+<section class="e-section" aria-labelledby="s5-title">
+  <div class="e-container">
+    <div class="e-cols">
+      <div class="anim-left">
+        <span class="service-tag"><i class="fas fa-star"></i> Servizio</span>
+        <p class="service-h2" id="s5-title">AI Creative Production</p>
+        <p class="service-body">Campagne fotografiche e video, contenuti digitali, visual di brand, asset creativi per ADV e comunicazione multicanale.</p>
+        <a href="#contatto" class="elementor-button">Scopri di più</a>
       </div>
-      <div class="image-card fade-in-right delay-1">
-        <div class="image-placeholder">
+      <div class="anim-right d1">
+        <div class="e-img-placeholder e-img-placeholder--landscape">
           <i class="fas fa-image"></i>
           <span>AI Creative Production</span>
         </div>
@@ -1609,22 +1385,20 @@
 </section>
 
 
-<!-- ================================================
-     SECTION 6 – AI Product & Ecommerce
-================================================ -->
-<section class="service-section" aria-labelledby="s6-title">
-  <div class="container">
-    <div class="grid-2 grid-2--reverse">
-      <div class="fade-in-right">
-        <span class="service-badge"><i class="fas fa-box"></i> Servizio</span>
-        <h2 id="s6-title">AI Product &amp; Ecommerce</h2>
-        <p>
-          Foto prodotto, modelli virtuali, ambientazioni lifestyle, cataloghi digitali, contenuti marketplace.
-        </p>
-        <a href="#contatto" class="btn btn--primary" style="margin-top: 24px;">Scopri di più</a>
+<!-- ══════════════════════════════════════════════
+     SEZIONE 6 – AI Product & Ecommerce
+══════════════════════════════════════════════ -->
+<section class="e-section e-section--gray" aria-labelledby="s6-title">
+  <div class="e-container">
+    <div class="e-cols e-cols--rev">
+      <div class="anim-right">
+        <span class="service-tag"><i class="fas fa-box"></i> Servizio</span>
+        <p class="service-h2" id="s6-title">AI Product &amp; Ecommerce</p>
+        <p class="service-body">Foto prodotto, modelli virtuali, ambientazioni lifestyle, cataloghi digitali, contenuti marketplace.</p>
+        <a href="#contatto" class="elementor-button">Scopri di più</a>
       </div>
-      <div class="image-card fade-in-left delay-1">
-        <div class="image-placeholder">
+      <div class="anim-left d1">
+        <div class="e-img-placeholder e-img-placeholder--landscape">
           <i class="fas fa-image"></i>
           <span>AI Product &amp; Ecommerce</span>
         </div>
@@ -1634,22 +1408,20 @@
 </section>
 
 
-<!-- ================================================
-     SECTION 7 – AI Prototyping & Concept
-================================================ -->
-<section class="service-section" aria-labelledby="s7-title">
-  <div class="container">
-    <div class="grid-2">
-      <div class="fade-in-left">
-        <span class="service-badge"><i class="fas fa-drafting-compass"></i> Servizio</span>
-        <h2 id="s7-title">AI Prototyping &amp; Concept</h2>
-        <p>
-          Prototipi visivi, varianti colore e materiali, sviluppo concept, validazione stilistica.
-        </p>
-        <a href="#contatto" class="btn btn--primary" style="margin-top: 24px;">Scopri di più</a>
+<!-- ══════════════════════════════════════════════
+     SEZIONE 7 – AI Prototyping & Concept
+══════════════════════════════════════════════ -->
+<section class="e-section" aria-labelledby="s7-title">
+  <div class="e-container">
+    <div class="e-cols">
+      <div class="anim-left">
+        <span class="service-tag"><i class="fas fa-drafting-compass"></i> Servizio</span>
+        <p class="service-h2" id="s7-title">AI Prototyping &amp; Concept</p>
+        <p class="service-body">Prototipi visivi, varianti colore e materiali, sviluppo concept, validazione stilistica.</p>
+        <a href="#contatto" class="elementor-button">Scopri di più</a>
       </div>
-      <div class="image-card fade-in-right delay-1">
-        <div class="image-placeholder">
+      <div class="anim-right d1">
+        <div class="e-img-placeholder e-img-placeholder--landscape">
           <i class="fas fa-image"></i>
           <span>AI Prototyping &amp; Concept</span>
         </div>
@@ -1659,22 +1431,20 @@
 </section>
 
 
-<!-- ================================================
-     SECTION 8 – AI Ideation & Strategy
-================================================ -->
-<section class="service-section" aria-labelledby="s8-title">
-  <div class="container">
-    <div class="grid-2 grid-2--reverse">
-      <div class="fade-in-right">
-        <span class="service-badge"><i class="fas fa-lightbulb"></i> Servizio</span>
-        <h2 id="s8-title">AI Ideation &amp; Strategy</h2>
-        <p>
-          Storyboard, moodboard evolute, concept creativi, supporto progettuale avanzato.
-        </p>
-        <a href="#contatto" class="btn btn--primary" style="margin-top: 24px;">Scopri di più</a>
+<!-- ══════════════════════════════════════════════
+     SEZIONE 8 – AI Ideation & Strategy
+══════════════════════════════════════════════ -->
+<section class="e-section e-section--gray" aria-labelledby="s8-title">
+  <div class="e-container">
+    <div class="e-cols e-cols--rev">
+      <div class="anim-right">
+        <span class="service-tag"><i class="fas fa-lightbulb"></i> Servizio</span>
+        <p class="service-h2" id="s8-title">AI Ideation &amp; Strategy</p>
+        <p class="service-body">Storyboard, moodboard evolute, concept creativi, supporto progettuale avanzato.</p>
+        <a href="#contatto" class="elementor-button">Scopri di più</a>
       </div>
-      <div class="image-card fade-in-left delay-1">
-        <div class="image-placeholder">
+      <div class="anim-left d1">
+        <div class="e-img-placeholder e-img-placeholder--landscape">
           <i class="fas fa-image"></i>
           <span>AI Ideation &amp; Strategy</span>
         </div>
@@ -1684,121 +1454,137 @@
 </section>
 
 
-<!-- ================================================
-     SECTION 9 – Contattaci
-================================================ -->
-<section class="contact-section" id="contatto" aria-labelledby="s9-title">
-  <div class="container">
-    <div class="grid-2">
+<!-- ══════════════════════════════════════════════
+     SEZIONE 9 – Contattaci (replica form reference)
+══════════════════════════════════════════════ -->
+<section class="cta-section" id="contatto" aria-labelledby="s9-title">
+  <div class="e-container">
+    <div class="e-cols e-cols--top">
+
       <!-- Left -->
-      <div class="fade-in-left">
-        <span class="hero__eyebrow" style="background: rgba(255,255,255,0.1); color: var(--white);">Inizia ora</span>
+      <div class="anim-left">
         <h2 id="s9-title">Contattaci per una consulenza!</h2>
-        <p>
-          Se desideri integrare l'intelligenza artificiale nei tuoi processi di comunicazione in modo strategico, strutturato e controllato, possiamo supportarti nello sviluppo di soluzioni su misura.
-        </p>
-        <div style="display:flex; flex-direction:column; gap:12px; margin-top: 32px;">
-          <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.8);">
-            <i class="fas fa-envelope" style="color:var(--pink);width:20px;"></i>
-            <span>info@estro.agency</span>
-          </div>
-          <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.8);">
-            <i class="fas fa-phone" style="color:var(--pink);width:20px;"></i>
-            <span>+39 340 688 1494</span>
-          </div>
-          <div style="display:flex; align-items:flex-start; gap:12px; color:rgba(255,255,255,0.8);">
-            <i class="fas fa-map-marker-alt" style="color:var(--pink);width:20px; margin-top:3px;"></i>
-            <span>Via Vigevano 27, 20144 Milano (MI)</span>
-          </div>
-        </div>
+        <p>Se desideri integrare l'intelligenza artificiale nei tuoi processi di comunicazione in modo strategico, strutturato e controllato, possiamo supportarti nello sviluppo di soluzioni su misura.</p>
+        <ul class="cta-contact-info">
+          <li><i class="fas fa-envelope"></i><span>info@estro.agency</span></li>
+          <li><i class="fas fa-phone"></i><span>+39 340 688 1494</span></li>
+          <li><i class="fas fa-map-marker-alt"></i><span>Via Vigevano 27, 20144 Milano (MI)</span></li>
+        </ul>
       </div>
 
-      <!-- Right: Form -->
-      <div class="contact-form-wrap fade-in-right delay-1">
-        <h3 style="margin-bottom:24px;">Scrivi un messaggio</h3>
-        <form action="#" method="post" name="contact-form" novalidate>
-          <div class="form-group">
-            <input type="text" name="nome" placeholder="Nome e Cognome*" required autocomplete="name">
+      <!-- Right: Form (identico alla struttura Elementor del sito) -->
+      <div class="cta-form-wrap anim-right d1">
+        <h3>Scrivi un messaggio</h3>
+        <form class="elementor-form" method="post" name="Form AI consulenza" novalidate>
+          <div class="elementor-field-group">
+            <input type="text" class="elementor-field elementor-field-textual" placeholder="Nome e Cognome*" required autocomplete="name">
           </div>
-          <div class="form-group">
-            <input type="email" name="email" placeholder="Email*" required autocomplete="email">
+          <div class="elementor-field-group">
+            <input type="email" class="elementor-field elementor-field-textual" placeholder="Email*" required autocomplete="email">
           </div>
-          <div class="form-group">
-            <input type="tel" name="telefono" placeholder="Telefono" autocomplete="tel" pattern="[0-9()+\-\s]+">
+          <div class="elementor-field-group">
+            <input type="tel" class="elementor-field elementor-field-textual" placeholder="Telefono" autocomplete="tel">
           </div>
-          <div class="form-group">
-            <textarea name="messaggio" placeholder="Descrivi il tuo progetto..."></textarea>
+          <div class="elementor-field-group">
+            <textarea class="elementor-field" placeholder="Descrivi il tuo progetto..."></textarea>
           </div>
-          <div class="form-checkbox">
-            <input type="checkbox" id="policy-contact" name="policy" required>
-            <label for="policy-contact">Autorizzo il trattamento dei dati personali secondo la <a href="https://www.iubenda.com/privacy-policy/62391001" target="_blank" rel="noopener">Privacy Policy</a>.*</label>
+          <div class="elementor-field-group">
+            <span class="elementor-field-option">
+              <input type="checkbox" class="elementor-acceptance-field" id="policy-contact" required>
+              <label for="policy-contact">Autorizzo il trattamento dei dati personali secondo la <a href="https://www.iubenda.com/privacy-policy/62391001" target="_blank" rel="noopener">Privacy Policy</a>.*</label>
+            </span>
           </div>
-          <button type="submit" class="btn btn--primary" style="width:100%;">Contattaci</button>
+          <div class="e-form__buttons">
+            <button type="submit" class="elementor-button">
+              <span class="elementor-button-text">Contattaci</span>
+            </button>
+          </div>
         </form>
       </div>
+
     </div>
   </div>
 </section>
 
 
-<!-- ================================================
-     PARTNER SECTION
-================================================ -->
-<section class="partner-section" aria-labelledby="partner-title">
-  <div class="container">
-    <div class="partner-section__header fade-in">
-      <span class="section-intro__label">Partner & Riconoscimenti</span>
-      <h2 id="partner-title">Certificazioni e partner</h2>
-      <p>Lavoriamo con i migliori strumenti e partner del settore</p>
-    </div>
+<!-- ══════════════════════════════════════════════
+     PRENDIAMOCI UN CAFFÈ (replica dal sito reference)
+══════════════════════════════════════════════ -->
+<section class="caffe-section" aria-label="Chiamata all'azione">
+  <div class="e-container">
+    <div class="e-cols">
 
-    <div class="partner-badges fade-in delay-1">
-      <div class="partner-badge">Google Partner</div>
-      <div class="partner-badge">Meta Business</div>
-      <div class="partner-badge">Adobe</div>
-      <div class="partner-badge">Shopify</div>
-      <div class="partner-badge">Rolling Stone</div>
-    </div>
-
-    <div class="partner-cta fade-in delay-2">
-      <h2>PRENDIAMOCI UN CAFFÈ!<br><em style="font-style:normal; opacity:0.7;">Anche virtuale</em></h2>
-      <p>Hai un progetto in mente? Raccontacelo. Siamo qui per ascoltarti e trasformare la tua idea in realtà.</p>
-      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-        <a href="#contatto" class="btn btn--primary btn--lg">Contattaci ora</a>
-        <a href="https://estro.agency/case-studies/" class="btn btn--white btn--lg">Vedi i Case Studies</a>
+      <div class="anim-left">
+        <p class="caffe-title">PRENDIAMOCI UN CAFFè!</p>
+        <p class="caffe-sub">Anche virtuale</p>
       </div>
+
+      <div class="anim-right d1">
+        <form class="elementor-form" method="post" name="Form caffè AI" novalidate>
+          <div class="elementor-field-group">
+            <input type="text" class="elementor-field elementor-field-textual" placeholder="Nome e Cognome*" required autocomplete="name">
+          </div>
+          <div class="elementor-field-group">
+            <input type="email" class="elementor-field elementor-field-textual" placeholder="Email*" required autocomplete="email">
+          </div>
+          <div class="elementor-field-group">
+            <input type="tel" class="elementor-field elementor-field-textual" placeholder="Telefono" autocomplete="tel">
+          </div>
+          <div class="elementor-field-group">
+            <span class="elementor-field-option" style="color:rgba(255,255,255,0.6);">
+              <input type="checkbox" class="elementor-acceptance-field" id="policy-caffe" required>
+              <label for="policy-caffe">Autorizzo il trattamento dei dati personali secondo la <a href="https://www.iubenda.com/privacy-policy/62391001" target="_blank" rel="noopener" style="color:var(--pink);">Privacy Policy</a>.*</label>
+            </span>
+          </div>
+          <div class="e-form__buttons">
+            <button type="submit" class="elementor-button">
+              <span class="elementor-button-text">Richiedi informazioni</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
     </div>
   </div>
 </section>
 
 
-<!-- ================================================
+<!-- ══════════════════════════════════════════════
+     PARTNER SECTION
+══════════════════════════════════════════════ -->
+<section class="partner-section" aria-label="Partner e riconoscimenti">
+  <div class="e-container">
+    <h2>Partner</h2>
+    <div class="partner-row anim-fade">
+      <div class="partner-item">Google Partner</div>
+      <div class="partner-item">Meta Business</div>
+      <div class="partner-item">Adobe</div>
+      <div class="partner-item">Shopify</div>
+      <div class="partner-item">Il Sole 24 Ore</div>
+      <div class="partner-item">Rolling Stone</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
      FOOTER
-================================================ -->
+══════════════════════════════════════════════ -->
 <footer class="site-footer" role="contentinfo">
-  <div class="container">
+  <div class="e-container">
     <div class="footer-grid">
+
       <!-- Col 1: Brand -->
-      <div>
-        <div class="footer-logo">
+      <div class="footer-brand">
+        <div class="footer-brand__logo">
           <img src="Estro_logo05 (1).webp" alt="Estro Agency" width="140" height="40">
         </div>
-        <p class="footer__desc">
-          Estro Agency è un'agenzia di comunicazione e marketing digitale con sede a Milano. Trasformiamo idee in risultati concreti.
-        </p>
+        <p>Estro Agency è un'agenzia di comunicazione e marketing digitale con sede a Milano. Trasformiamo idee in risultati concreti.</p>
         <div class="footer-social">
-          <a href="https://instagram.com/estro.agency" target="_blank" rel="noopener" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/estro-agency" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://www.facebook.com/estroagency" target="_blank" rel="noopener" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.youtube.com/@estroagency3497" target="_blank" rel="noopener" aria-label="YouTube">
-            <i class="fab fa-youtube"></i>
-          </a>
+          <a href="https://instagram.com/estro.agency" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/estro-agency" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/estroagency" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/@estroagency3497" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
 
@@ -1821,38 +1607,32 @@
       <div class="footer-col">
         <h3>Contatti</h3>
         <address>
-          <p><strong style="color:var(--white);">YUBA S.r.l.</strong><br>
-          C.F./P. IVA 09955650966</p>
-          <p style="margin-top:12px;"><strong style="color:var(--white);">Sede legale</strong><br>
-          <a href="https://maps.app.goo.gl/jnwbdFAhcQJveWcL6" target="_blank" rel="noopener">
-            Via Vigevano n. 27<br>20144, Milano (MI)
-          </a></p>
+          <p><strong>YUBA S.r.l.</strong><br>C.F./P. IVA 09955650966</p>
+          <p style="margin-top:10px;"><strong>Sede legale</strong><br>
+          <a href="https://maps.app.goo.gl/jnwbdFAhcQJveWcL6" target="_blank" rel="noopener">Via Vigevano n. 27<br>20144, Milano (MI)</a></p>
         </address>
-        <div class="footer-btn-group">
+        <div class="footer-btns">
           <a href="tel:+393406881494"><i class="fas fa-phone"></i> Chiamaci</a>
           <a href="https://estro.agency/lavora-con-noi/"><i class="fas fa-briefcase"></i> Lavora con noi</a>
         </div>
       </div>
 
-      <!-- Col 4: Sedi -->
+      <!-- Col 4: Sedi + Seguici -->
       <div class="footer-col">
         <h3>Vieni a trovarci</h3>
         <address>
-          <p><strong style="color:var(--white);">SEDE DI MILANO</strong><br>
-          <a href="https://maps.app.goo.gl/jnwbdFAhcQJveWcL6" target="_blank" rel="noopener">
-            Via Vigevano n.27<br>20144, Milano (MI)
-          </a></p>
-          <p style="margin-top:16px;"><strong style="color:var(--white);">SEDE DI VARESE</strong><br>
-          <a href="https://maps.app.goo.gl/BT8CyTxRfcggQRdb8" target="_blank" rel="noopener">
-            Via Mazzini n.1<br>21013, Gallarate (VA)
-          </a></p>
+          <p><strong>SEDE DI MILANO</strong><br>
+          <a href="https://maps.app.goo.gl/jnwbdFAhcQJveWcL6" target="_blank" rel="noopener">Via Vigevano n.27<br>20144, Milano (MI)</a></p>
+          <p style="margin-top:12px;"><strong>SEDE DI VARESE</strong><br>
+          <a href="https://maps.app.goo.gl/BT8CyTxRfcggQRdb8" target="_blank" rel="noopener">Via Mazzini n.1<br>21013, Gallarate (VA)</a></p>
         </address>
       </div>
+
     </div>
 
-    <!-- Footer Bottom -->
+    <!-- Footer bottom -->
     <div class="footer-bottom">
-      <p class="footer-bottom__copy">Copyright &copy;2026 Yuba S.r.l. – Tutti i diritti riservati</p>
+      <p>Copyright &copy;2026 Yuba S.r.l. – Tutti i diritti riservati</p>
       <div class="footer-bottom__links">
         <a href="https://www.iubenda.com/privacy-policy/62391001" target="_blank" rel="noopener">Privacy Policy</a>
         <a href="https://www.iubenda.com/privacy-policy/62391001/cookie-policy" target="_blank" rel="noopener">Cookie Policy</a>
@@ -1860,71 +1640,62 @@
     </div>
   </div>
 </footer>
+</main>
 
 
-<!-- ================================================
-     JAVASCRIPT
-================================================ -->
+<!-- ══════════════════════════════════════════════
+     JS
+══════════════════════════════════════════════ -->
 <script>
-  // Mobile menu toggle
-  const menuToggle = document.getElementById('menuToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const menuIcon = document.getElementById('menuIcon');
+  /* Hamburger menu */
+  const toggle = document.getElementById('menuToggle');
+  const mMenu = document.getElementById('mobileMenu');
+  const mIcon = document.getElementById('menuIcon');
 
-  menuToggle.addEventListener('click', function () {
-    const isOpen = mobileMenu.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded', isOpen);
-    mobileMenu.setAttribute('aria-hidden', !isOpen);
-    menuIcon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
+  toggle.addEventListener('click', () => {
+    const open = mMenu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+    mMenu.setAttribute('aria-hidden', !open);
+    mIcon.className = open ? 'fas fa-times' : 'fas fa-bars';
   });
 
-  // Close mobile menu on outside click
-  document.addEventListener('click', function (e) {
-    if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-      mobileMenu.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      mobileMenu.setAttribute('aria-hidden', 'true');
-      menuIcon.className = 'fas fa-bars';
+  document.addEventListener('click', e => {
+    if (!toggle.contains(e.target) && !mMenu.contains(e.target)) {
+      mMenu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      mMenu.setAttribute('aria-hidden', 'true');
+      mIcon.className = 'fas fa-bars';
     }
   });
 
-  // Scroll animations (Intersection Observer)
-  const animatedEls = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+  /* Scroll animations */
+  const animEls = document.querySelectorAll('.anim-fade, .anim-left, .anim-right');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  animEls.forEach(el => io.observe(el));
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-  );
-
-  animatedEls.forEach((el) => observer.observe(el));
-
-  // Sticky navbar shadow on scroll
-  const header = document.querySelector('.site-header');
+  /* Sticky header shadow */
+  const hdr = document.querySelector('.site-header');
   window.addEventListener('scroll', () => {
-    header.style.boxShadow = window.scrollY > 10
-      ? '0 4px 24px rgba(0,0,0,0.1)'
-      : '0 2px 12px rgba(0,0,0,0.06)';
+    hdr.style.boxShadow = scrollY > 10 ? '0 3px 16px rgba(0,0,0,0.1)' : '0 2px 8px rgba(0,0,0,0.08)';
   }, { passive: true });
 
-  // Basic form validation feedback
-  document.querySelectorAll('form').forEach((form) => {
-    form.addEventListener('submit', function (e) {
+  /* Form feedback */
+  document.querySelectorAll('.elementor-form').forEach(form => {
+    form.addEventListener('submit', e => {
       e.preventDefault();
-      const btn = this.querySelector('button[type="submit"]');
-      const orig = btn.textContent;
-      btn.textContent = '✓ Messaggio inviato!';
+      const btn = form.querySelector('button[type="submit"]');
+      const txt = btn.querySelector('.elementor-button-text');
+      const orig = txt.textContent;
+      txt.textContent = 'Messaggio inviato ✓';
       btn.style.background = '#22c55e';
       btn.style.borderColor = '#22c55e';
       btn.disabled = true;
       setTimeout(() => {
-        btn.textContent = orig;
+        txt.textContent = orig;
         btn.style.background = '';
         btn.style.borderColor = '';
         btn.disabled = false;
