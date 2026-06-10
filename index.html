@@ -11,10 +11,10 @@
   <meta property="og:title" content="AI Creative Production – Estro Agency">
   <meta property="og:description" content="Dalla creatività alla produzione: l'intelligenza artificiale al servizio del tuo brand.">
 
-  <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Poppins + Roboto + Bebas Neue (fallback Vanguard per preview) -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -39,6 +39,10 @@
     /* ─────────────────────────────────────────────────
        VANGUARD FONT (tutte le varianti disponibili)
     ───────────────────────────────────────────────── */
+    /*
+      Vanguard CF: caricato da estro.agency (funziona su produzione).
+      Bebas Neue (Google Fonts) è il fallback visivo per preview/staging.
+    */
     @font-face {
       font-family: 'Vanguard';
       font-style: normal;
@@ -330,11 +334,12 @@
        TYPOGRAPHY — Vanguard H1, Poppins H2/H3, Roboto body
     ───────────────────────────────────────────────── */
 
-    /* Tutti i titoli principali H1 → Vanguard */
+    /* Tutti i titoli principali H1 → Vanguard (fallback: Bebas Neue) */
     h1, .e-heading-vanguard, .hero-title, .caffe-title {
-      font-family: 'Vanguard', sans-serif !important;
+      font-family: 'Vanguard', 'Bebas Neue', sans-serif !important;
       font-weight: 700;
       line-height: 1.15;
+      letter-spacing: 0.02em;
       color: var(--black);
     }
 
