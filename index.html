@@ -13,8 +13,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Poppins + Roboto + Bebas Neue (fallback Vanguard per preview) -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Poppins + Roboto + Barlow Condensed (fallback Vanguard) -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -334,25 +334,25 @@
        TYPOGRAPHY — Vanguard H1, Poppins H2/H3, Roboto body
     ───────────────────────────────────────────────── */
 
-    /* Tutti i titoli principali H1 → Vanguard (fallback: Bebas Neue) */
+    /* Tutti i titoli principali H1 → Vanguard (fallback: Barlow Condensed) */
     h1, .e-heading-vanguard, .hero-title, .caffe-title {
-      font-family: 'Vanguard', 'Bebas Neue', sans-serif !important;
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: 0.02em;
+      font-family: 'Vanguard', 'Barlow Condensed', sans-serif !important;
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
       text-transform: uppercase;
       color: var(--black);
     }
 
-    /* H2 titoli sezione → Vanguard (fallback: Bebas Neue), maiuscolo */
+    /* H2 titoli sezione → Vanguard (fallback: Barlow Condensed), maiuscolo */
     h2, .e-heading-poppins, .service-h2, .section-title-center h2,
     .workflow-card__head h2, .cta-section h2,
     .capability-content h2, .partner-section h2 {
-      font-family: 'Vanguard', 'Bebas Neue', sans-serif !important;
-      font-weight: 700;
+      font-family: 'Vanguard', 'Barlow Condensed', sans-serif !important;
+      font-weight: 800;
       font-size: clamp(1.8rem, 3.5vw, 55px);
-      line-height: 1.1;
-      letter-spacing: 0.02em;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
       text-transform: uppercase;
       color: var(--black);
     }
@@ -837,7 +837,7 @@
     .caffe-section .e-cols { align-items: center; gap: 80px; }
 
     .caffe-title {
-      font-family: 'Vanguard', 'Bebas Neue', sans-serif;
+      font-family: 'Vanguard', 'Barlow Condensed', sans-serif;
       font-size: clamp(2rem, 5vw, 55px);
       font-weight: 700;
       color: var(--white);
@@ -1430,6 +1430,47 @@
   </div>
 </section>
 
+
+<!-- ══════════════════════════════════════════════
+     PRENDIAMOCI UN CAFFÈ
+══════════════════════════════════════════════ -->
+<section class="caffe-section" aria-label="Chiamata all'azione">
+  <div class="e-container">
+    <div class="e-cols">
+
+      <div class="anim-left">
+        <p class="caffe-title">PRENDIAMOCI UN CAFFè!</p>
+        <p class="caffe-sub">Anche virtuale</p>
+      </div>
+
+      <div class="anim-right d1">
+        <form class="elementor-form" method="post" name="Form caffè AI" novalidate>
+          <div class="elementor-field-group">
+            <input type="text" class="elementor-field elementor-field-textual" placeholder="Nome e Cognome*" required autocomplete="name">
+          </div>
+          <div class="elementor-field-group">
+            <input type="email" class="elementor-field elementor-field-textual" placeholder="Email*" required autocomplete="email">
+          </div>
+          <div class="elementor-field-group">
+            <input type="tel" class="elementor-field elementor-field-textual" placeholder="Telefono" autocomplete="tel">
+          </div>
+          <div class="elementor-field-group">
+            <span class="elementor-field-option" style="color:rgba(255,255,255,0.6);">
+              <input type="checkbox" class="elementor-acceptance-field" id="policy-caffe" required>
+              <label for="policy-caffe">Autorizzo il trattamento dei dati personali secondo la <a href="https://www.iubenda.com/privacy-policy/62391001" target="_blank" rel="noopener" style="color:var(--pink);">Privacy Policy</a>.*</label>
+            </span>
+          </div>
+          <div class="e-form__buttons">
+            <button type="submit" class="elementor-button">
+              <span class="elementor-button-text">Contattaci</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 </main>
 
