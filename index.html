@@ -37,12 +37,27 @@
     button { cursor: pointer; font-family: inherit; border: none; background: none; }
 
     /* ─────────────────────────────────────────────────
-       VANGUARD FONT
+       VANGUARD FONT (tutte le varianti disponibili)
     ───────────────────────────────────────────────── */
     @font-face {
       font-family: 'Vanguard';
       font-style: normal;
-      font-weight: bold;
+      font-weight: 400;
+      font-display: swap;
+      src: url('https://estro.agency/wp-content/uploads/2021/11/VanguardCF-Regular.woff') format('woff');
+    }
+    @font-face {
+      font-family: 'Vanguard';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url('https://estro.agency/wp-content/uploads/2021/11/FontsFree-Net-vanguard-cf-medium.woff2') format('woff2'),
+           url('https://estro.agency/wp-content/uploads/2021/11/VanguardCF-Medium.woff') format('woff');
+    }
+    @font-face {
+      font-family: 'Vanguard';
+      font-style: normal;
+      font-weight: 700;
       font-display: swap;
       src: url('https://estro.agency/wp-content/uploads/2021/11/VanguardCF-Regular.woff') format('woff');
     }
@@ -312,24 +327,35 @@
     .e-section--pink { background: var(--pink); color: var(--white); }
 
     /* ─────────────────────────────────────────────────
-       TYPOGRAPHY — matching Estro site
+       TYPOGRAPHY — Vanguard H1, Poppins H2/H3, Roboto body
     ───────────────────────────────────────────────── */
-    .e-heading-vanguard {
-      font-family: 'Vanguard', sans-serif;
-      font-weight: bold;
+
+    /* Tutti i titoli principali H1 → Vanguard */
+    h1, .e-heading-vanguard, .hero-title, .caffe-title {
+      font-family: 'Vanguard', sans-serif !important;
+      font-weight: 700;
       line-height: 1.15;
       color: var(--black);
     }
 
-    .e-heading-poppins {
-      font-family: 'Poppins', sans-serif;
+    /* Tutti i titoli secondari H2, H3 → Poppins */
+    h2, h3, .e-heading-poppins, .service-h2, .section-title-center h2,
+    .workflow-card__head h2, .cta-section h2, .hero-h3,
+    .capability-content h2, .cta-form-wrap h3 {
+      font-family: 'Poppins', sans-serif !important;
       font-weight: 700;
       line-height: 1.25;
       color: var(--black);
     }
 
+    /* Tutti i testi corpo → Roboto */
+    p, li, label, input, textarea, address, span:not(.service-tag):not(.e-label):not(.feature-pill):not(.service-badge) {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Label uppercase → Poppins */
     .e-label {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Poppins', sans-serif !important;
       font-weight: 600;
       font-size: 12px;
       letter-spacing: 0.12em;
@@ -337,6 +363,13 @@
       color: var(--pink);
       display: block;
       margin-bottom: 12px;
+    }
+
+    /* Nav, pulsanti, tag → Poppins */
+    .e-navbar__nav a, .elementor-button, .service-tag,
+    .feature-pill, .briefing-step p, .wf-step__text,
+    .footer-col h3, .partner-item {
+      font-family: 'Poppins', sans-serif !important;
     }
 
     /* ─────────────────────────────────────────────────
@@ -392,7 +425,9 @@
     .hero-title span { color: var(--pink); }
 
     .hero-subtitle {
+      font-family: 'Roboto', sans-serif;
       font-size: 16px;
+      font-weight: 400;
       color: var(--gray-text);
       margin-bottom: 36px;
       line-height: 1.8;
@@ -510,6 +545,8 @@
       margin: 14px 0;
     }
     .e-list li {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
       display: flex;
       align-items: flex-start;
       gap: 10px;
@@ -717,7 +754,9 @@
     }
 
     .service-body {
+      font-family: 'Roboto', sans-serif;
       font-size: 16px;
+      font-weight: 400;
       color: var(--gray-text);
       line-height: 1.8;
       margin-bottom: 28px;
