@@ -13,8 +13,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Poppins + Roboto + Bebas Neue (fallback Vanguard per preview) -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Poppins + Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -27,7 +27,7 @@
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
       line-height: 1.7;
-      color: #333;
+      color: #000;
       background: #fff;
       overflow-x: hidden;
     }
@@ -39,31 +39,54 @@
     /* ─────────────────────────────────────────────────
        VANGUARD FONT (tutte le varianti disponibili)
     ───────────────────────────────────────────────── */
-    /*
-      Vanguard CF: caricato da estro.agency (funziona su produzione).
-      Bebas Neue (Google Fonts) è il fallback visivo per preview/staging.
-    */
+    @font-face {
+      font-family: 'Vanguard';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url('Vanguard/VanguardCF-Light.otf') format('opentype');
+    }
     @font-face {
       font-family: 'Vanguard';
       font-style: normal;
       font-weight: 400;
       font-display: swap;
-      src: url('https://estro.agency/wp-content/uploads/2021/11/VanguardCF-Regular.woff') format('woff');
+      src: url('Vanguard/VanguardCF-Regular.otf') format('opentype');
     }
     @font-face {
       font-family: 'Vanguard';
       font-style: normal;
       font-weight: 500;
       font-display: swap;
-      src: url('https://estro.agency/wp-content/uploads/2021/11/FontsFree-Net-vanguard-cf-medium.woff2') format('woff2'),
-           url('https://estro.agency/wp-content/uploads/2021/11/VanguardCF-Medium.woff') format('woff');
+      src: url('Vanguard/VanguardCF-Medium.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'Vanguard';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url('Vanguard/VanguardCF-DemiBold.otf') format('opentype');
     }
     @font-face {
       font-family: 'Vanguard';
       font-style: normal;
       font-weight: 700;
       font-display: swap;
-      src: url('https://estro.agency/wp-content/uploads/2021/11/VanguardCF-Regular.woff') format('woff');
+      src: url('Vanguard/VanguardCF-Bold.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'Vanguard';
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: url('Vanguard/VanguardCF-ExtraBold.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'Vanguard';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url('Vanguard/VanguardCF-Heavy.otf') format('opentype');
     }
 
     /* ─────────────────────────────────────────────────
@@ -76,8 +99,8 @@
       --white: #fff;
       --gray-bg: #f7f7f7;
       --gray-light: #efefef;
-      --gray-mid: #999;
-      --gray-text: #555;
+      --gray-mid: #000;
+      --gray-text: #000;
       --container: 1140px;
       --section-pad: 80px;
       --radius: 4px;
@@ -334,25 +357,25 @@
        TYPOGRAPHY — Vanguard H1, Poppins H2/H3, Roboto body
     ───────────────────────────────────────────────── */
 
-    /* Tutti i titoli principali H1 → Vanguard (fallback: Bebas Neue) */
+    /* Tutti i titoli principali H1 → Vanguard ExtraBold */
     h1, .e-heading-vanguard, .hero-title, .caffe-title {
-      font-family: 'Vanguard', 'Bebas Neue', sans-serif !important;
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: 0.02em;
+      font-family: 'Vanguard', sans-serif !important;
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
       text-transform: uppercase;
       color: var(--black);
     }
 
-    /* H2 titoli sezione → Vanguard (fallback: Bebas Neue), maiuscolo */
+    /* H2 titoli sezione → Vanguard ExtraBold, maiuscolo */
     h2, .e-heading-poppins, .service-h2, .section-title-center h2,
     .workflow-card__head h2, .cta-section h2,
     .capability-content h2, .partner-section h2 {
-      font-family: 'Vanguard', 'Bebas Neue', sans-serif !important;
-      font-weight: 700;
+      font-family: 'Vanguard', sans-serif !important;
+      font-weight: 800;
       font-size: clamp(1.8rem, 3.5vw, 55px);
-      line-height: 1.1;
-      letter-spacing: 0.02em;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
       text-transform: uppercase;
       color: var(--black);
     }
@@ -837,7 +860,7 @@
     .caffe-section .e-cols { align-items: center; gap: 80px; }
 
     .caffe-title {
-      font-family: 'Vanguard', 'Bebas Neue', sans-serif;
+      font-family: 'Vanguard', sans-serif;
       font-size: clamp(2rem, 5vw, 55px);
       font-weight: 700;
       color: var(--white);
@@ -1055,81 +1078,7 @@
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════════
-     HEADER
-══════════════════════════════════════════════ -->
-<header class="site-header" role="banner">
-  <div class="e-container">
-    <nav class="e-navbar" aria-label="Navigazione principale">
-
-      <!-- Logo -->
-      <div class="e-navbar__logo">
-        <a href="https://estro.agency/" aria-label="Estro Agency – Homepage">
-          <img src="Estro_logo05 (1).webp" alt="Estro Agency" width="200" height="58">
-        </a>
-      </div>
-
-      <!-- Menu desktop -->
-      <ul class="e-navbar__nav" role="list">
-        <li><a href="https://estro.agency/">Home</a></li>
-        <li class="has-sub">
-          <a href="#" class="active">Servizi</a>
-          <ul class="e-submenu" role="list">
-            <li><a href="https://estro.agency/google-ads-per-il-tuo-business/">Google ADS</a></li>
-            <li><a href="https://estro.agency/campagne-pubblicitarie-social-per-il-tuo-business/">Social ADS</a></li>
-            <li><a href="https://estro.agency/social-media-management/">Social media management</a></li>
-            <li><a href="https://estro.agency/influencer-marketing/">Influencer Marketing</a></li>
-            <li><a href="https://estro.agency/strategia-digitale/">Strategia digitale</a></li>
-            <li><a href="https://estro.agency/graphic-design/">Graphic design</a></li>
-            <li><a href="https://estro.agency/web-design/">Web Design</a></li>
-            <li><a href="https://estro.agency/produzione-contenuti/">Produzione contenuti</a></li>
-            <li><a href="https://estro.agency/modellazione-3d/">Modellazione &amp; Renderizzazione 3D</a></li>
-          </ul>
-        </li>
-        <li><a href="https://estro.agency/case-studies/">Case Studies</a></li>
-        <li><a href="https://estro.agency/news/">News</a></li>
-        <li><a href="https://estro.agency/tips-tricks/">Tips &amp; Tricks</a></li>
-        <li><a href="https://estro.agency/lavora-con-noi/">Lavora con noi</a></li>
-        <li><a href="https://estro.agency/contatti/">Contatti</a></li>
-      </ul>
-
-      <!-- CTA -->
-      <div class="e-navbar__cta">
-        <a href="#contatto" class="elementor-button">Contattaci</a>
-      </div>
-
-      <!-- Hamburger -->
-      <button class="e-navbar__toggle" id="menuToggle" aria-label="Apri menu" aria-expanded="false">
-        <i class="fas fa-bars" id="menuIcon"></i>
-      </button>
-    </nav>
-  </div>
-
-  <!-- Mobile menu -->
-  <div class="e-mobile-menu" id="mobileMenu" aria-hidden="true">
-    <a href="https://estro.agency/">Home</a>
-    <a href="#">Servizi</a>
-    <div class="e-mobile-menu__sub">
-      <a href="https://estro.agency/google-ads-per-il-tuo-business/">Google ADS</a>
-      <a href="https://estro.agency/campagne-pubblicitarie-social-per-il-tuo-business/">Social ADS</a>
-      <a href="https://estro.agency/social-media-management/">Social media management</a>
-      <a href="https://estro.agency/influencer-marketing/">Influencer Marketing</a>
-      <a href="https://estro.agency/strategia-digitale/">Strategia digitale</a>
-      <a href="https://estro.agency/graphic-design/">Graphic design</a>
-      <a href="https://estro.agency/web-design/">Web Design</a>
-      <a href="https://estro.agency/produzione-contenuti/">Produzione contenuti</a>
-    </div>
-    <a href="https://estro.agency/case-studies/">Case Studies</a>
-    <a href="https://estro.agency/news/">News</a>
-    <a href="https://estro.agency/tips-tricks/">Tips &amp; Tricks</a>
-    <a href="https://estro.agency/lavora-con-noi/">Lavora con noi</a>
-    <a href="https://estro.agency/contatti/">Contatti</a>
-    <div class="e-mobile-menu__cta">
-      <a href="#contatto" class="elementor-button">Contattaci</a>
-    </div>
-  </div>
-</header>
-
+<!-- HEADER RIMOSSO -->
 
 <!-- ══════════════════════════════════════════════
      HERO
@@ -1143,9 +1092,7 @@
       <div class="anim-left">
         <span class="e-label">AI Creative Production</span>
         <h1 class="hero-title e-heading-vanguard" id="hero-title">
-          Dalla creatività alla produzione:<br>
-          <span>l'intelligenza artificiale</span><br>
-          al servizio del tuo brand
+          <span style="color:var(--pink);">l'intelligenza artificiale</span> al servizio del tuo brand
         </h1>
         <p class="hero-subtitle">
           Utilizziamo l'AI come estensione della direzione creativa per migliorare efficienza, qualità e velocità di esecuzione, mantenendo pieno controllo sul risultato finale.
@@ -1506,60 +1453,7 @@
 
 
 <!-- ══════════════════════════════════════════════
-     SEZIONE 9 – Contattaci (replica form reference)
-══════════════════════════════════════════════ -->
-<section class="cta-section" id="contatto" aria-labelledby="s9-title">
-  <div class="e-container">
-    <div class="e-cols e-cols--top">
-
-      <!-- Left -->
-      <div class="anim-left">
-        <h2 id="s9-title">Contattaci per una consulenza!</h2>
-        <p>Se desideri integrare l'intelligenza artificiale nei tuoi processi di comunicazione in modo strategico, strutturato e controllato, possiamo supportarti nello sviluppo di soluzioni su misura.</p>
-        <ul class="cta-contact-info">
-          <li><i class="fas fa-envelope"></i><span>info@estro.agency</span></li>
-          <li><i class="fas fa-phone"></i><span>+39 340 688 1494</span></li>
-          <li><i class="fas fa-map-marker-alt"></i><span>Via Vigevano 27, 20144 Milano (MI)</span></li>
-        </ul>
-      </div>
-
-      <!-- Right: Form (identico alla struttura Elementor del sito) -->
-      <div class="cta-form-wrap anim-right d1">
-        <h3>Scrivi un messaggio</h3>
-        <form class="elementor-form" method="post" name="Form AI consulenza" novalidate>
-          <div class="elementor-field-group">
-            <input type="text" class="elementor-field elementor-field-textual" placeholder="Nome e Cognome*" required autocomplete="name">
-          </div>
-          <div class="elementor-field-group">
-            <input type="email" class="elementor-field elementor-field-textual" placeholder="Email*" required autocomplete="email">
-          </div>
-          <div class="elementor-field-group">
-            <input type="tel" class="elementor-field elementor-field-textual" placeholder="Telefono" autocomplete="tel">
-          </div>
-          <div class="elementor-field-group">
-            <textarea class="elementor-field" placeholder="Descrivi il tuo progetto..."></textarea>
-          </div>
-          <div class="elementor-field-group">
-            <span class="elementor-field-option">
-              <input type="checkbox" class="elementor-acceptance-field" id="policy-contact" required>
-              <label for="policy-contact">Autorizzo il trattamento dei dati personali secondo la <a href="https://www.iubenda.com/privacy-policy/62391001" target="_blank" rel="noopener">Privacy Policy</a>.*</label>
-            </span>
-          </div>
-          <div class="e-form__buttons">
-            <button type="submit" class="elementor-button">
-              <span class="elementor-button-text">Contattaci</span>
-            </button>
-          </div>
-        </form>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════
-     PRENDIAMOCI UN CAFFÈ (replica dal sito reference)
+     PRENDIAMOCI UN CAFFÈ
 ══════════════════════════════════════════════ -->
 <section class="caffe-section" aria-label="Chiamata all'azione">
   <div class="e-container">
@@ -1589,7 +1483,7 @@
           </div>
           <div class="e-form__buttons">
             <button type="submit" class="elementor-button">
-              <span class="elementor-button-text">Richiedi informazioni</span>
+              <span class="elementor-button-text">Contattaci</span>
             </button>
           </div>
         </form>
@@ -1599,98 +1493,6 @@
   </div>
 </section>
 
-
-<!-- ══════════════════════════════════════════════
-     PARTNER SECTION
-══════════════════════════════════════════════ -->
-<section class="partner-section" aria-label="Partner e riconoscimenti">
-  <div class="e-container">
-    <h2>Partner</h2>
-    <div class="partner-row anim-fade">
-      <div class="partner-item">Google Partner</div>
-      <div class="partner-item">Meta Business</div>
-      <div class="partner-item">Adobe</div>
-      <div class="partner-item">Shopify</div>
-      <div class="partner-item">Il Sole 24 Ore</div>
-      <div class="partner-item">Rolling Stone</div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════
-     FOOTER
-══════════════════════════════════════════════ -->
-<footer class="site-footer" role="contentinfo">
-  <div class="e-container">
-    <div class="footer-grid">
-
-      <!-- Col 1: Brand -->
-      <div class="footer-brand">
-        <div class="footer-brand__logo">
-          <img src="Estro_logo05 (1).webp" alt="Estro Agency" width="140" height="40">
-        </div>
-        <p>Estro Agency è un'agenzia di comunicazione e marketing digitale con sede a Milano. Trasformiamo idee in risultati concreti.</p>
-        <div class="footer-social">
-          <a href="https://instagram.com/estro.agency" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/estro-agency" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.facebook.com/estroagency" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.youtube.com/@estroagency3497" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-
-      <!-- Col 2: Servizi -->
-      <div class="footer-col">
-        <h3>Servizi</h3>
-        <ul>
-          <li><a href="https://estro.agency/google-ads-per-il-tuo-business/">Google ADS</a></li>
-          <li><a href="https://estro.agency/campagne-pubblicitarie-social-per-il-tuo-business/">Social ADS</a></li>
-          <li><a href="https://estro.agency/social-media-management/">Social Media</a></li>
-          <li><a href="https://estro.agency/influencer-marketing/">Influencer Marketing</a></li>
-          <li><a href="https://estro.agency/strategia-digitale/">Strategia digitale</a></li>
-          <li><a href="https://estro.agency/graphic-design/">Graphic Design</a></li>
-          <li><a href="https://estro.agency/web-design/">Web Design</a></li>
-          <li><a href="https://estro.agency/produzione-contenuti/">Produzione contenuti</a></li>
-        </ul>
-      </div>
-
-      <!-- Col 3: Contatti -->
-      <div class="footer-col">
-        <h3>Contatti</h3>
-        <address>
-          <p><strong>YUBA S.r.l.</strong><br>C.F./P. IVA 09955650966</p>
-          <p style="margin-top:10px;"><strong>Sede legale</strong><br>
-          <a href="https://maps.app.goo.gl/jnwbdFAhcQJveWcL6" target="_blank" rel="noopener">Via Vigevano n. 27<br>20144, Milano (MI)</a></p>
-        </address>
-        <div class="footer-btns">
-          <a href="tel:+393406881494"><i class="fas fa-phone"></i> Chiamaci</a>
-          <a href="https://estro.agency/lavora-con-noi/"><i class="fas fa-briefcase"></i> Lavora con noi</a>
-        </div>
-      </div>
-
-      <!-- Col 4: Sedi + Seguici -->
-      <div class="footer-col">
-        <h3>Vieni a trovarci</h3>
-        <address>
-          <p><strong>SEDE DI MILANO</strong><br>
-          <a href="https://maps.app.goo.gl/jnwbdFAhcQJveWcL6" target="_blank" rel="noopener">Via Vigevano n.27<br>20144, Milano (MI)</a></p>
-          <p style="margin-top:12px;"><strong>SEDE DI VARESE</strong><br>
-          <a href="https://maps.app.goo.gl/BT8CyTxRfcggQRdb8" target="_blank" rel="noopener">Via Mazzini n.1<br>21013, Gallarate (VA)</a></p>
-        </address>
-      </div>
-
-    </div>
-
-    <!-- Footer bottom -->
-    <div class="footer-bottom">
-      <p>Copyright &copy;2026 Yuba S.r.l. – Tutti i diritti riservati</p>
-      <div class="footer-bottom__links">
-        <a href="https://www.iubenda.com/privacy-policy/62391001" target="_blank" rel="noopener">Privacy Policy</a>
-        <a href="https://www.iubenda.com/privacy-policy/62391001/cookie-policy" target="_blank" rel="noopener">Cookie Policy</a>
-      </div>
-    </div>
-  </div>
-</footer>
 </main>
 
 
@@ -1698,27 +1500,6 @@
      JS
 ══════════════════════════════════════════════ -->
 <script>
-  /* Hamburger menu */
-  const toggle = document.getElementById('menuToggle');
-  const mMenu = document.getElementById('mobileMenu');
-  const mIcon = document.getElementById('menuIcon');
-
-  toggle.addEventListener('click', () => {
-    const open = mMenu.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open);
-    mMenu.setAttribute('aria-hidden', !open);
-    mIcon.className = open ? 'fas fa-times' : 'fas fa-bars';
-  });
-
-  document.addEventListener('click', e => {
-    if (!toggle.contains(e.target) && !mMenu.contains(e.target)) {
-      mMenu.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-      mMenu.setAttribute('aria-hidden', 'true');
-      mIcon.className = 'fas fa-bars';
-    }
-  });
-
   /* Scroll animations */
   const animEls = document.querySelectorAll('.anim-fade, .anim-left, .anim-right');
   const io = new IntersectionObserver(entries => {
@@ -1727,12 +1508,6 @@
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   animEls.forEach(el => io.observe(el));
-
-  /* Sticky header shadow */
-  const hdr = document.querySelector('.site-header');
-  window.addEventListener('scroll', () => {
-    hdr.style.boxShadow = scrollY > 10 ? '0 3px 16px rgba(0,0,0,0.1)' : '0 2px 8px rgba(0,0,0,0.08)';
-  }, { passive: true });
 
   /* Form feedback */
   document.querySelectorAll('.elementor-form').forEach(form => {
